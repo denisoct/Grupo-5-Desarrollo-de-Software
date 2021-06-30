@@ -3,7 +3,7 @@
 create database DBTutorias   
 on
   (name = DBTutorias,           -- Primary data file
-   filename = 'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\Files\Tutorias.mdf',
+   filename = 'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\Files\Tutorias.mdf',
   
   SIZE = 5MB,
   MAXSIZE = 20MB,
@@ -11,16 +11,16 @@ on
   )  
   log on
   (name = DBTutorias_Log,       -- Log file
-   filename = 'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\Files\Tutorias.ldf',
+   filename = 'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\Files\Tutorias.ldf',
    SIZE = 5MB,
    MAXSIZE = 20MB,
    FILEGROWTH = 2MB
   )
 go
-
+	
 /* CREACION DE TIPOS */
 
-use DBTutorias  
+use DBTutorias
 
 /* CREACION DE TABLAS */
 
@@ -97,3 +97,5 @@ insert into DocenteTutor values ('193023','ESTHER','PAREDES OLIVERA','CO')
 insert into DocenteTutor values ('172453','ERNESTO','CARPIO PUELLES','CO')
 insert into DocenteTutor values ('193405','GIOVANNA','TARRAGA PEZO','IL')
 insert into DocenteTutor values ('189022','EVA','ARCE CRESPO','IL')
+
+select * from Alumno

@@ -44,7 +44,7 @@ namespace WinFormsCrud
             }
             else
             {
-                ta.Insertar(txtCodigo.Text.Trim(), txtNombre.Text.Trim().ToUpper());
+                   ta.Insert(txtCodigo.Text.Trim().ToString(), txtNombre.Text.Trim().ToUpper().ToString());
             }
         }
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace WinFormsCrud
 {
@@ -15,6 +16,13 @@ namespace WinFormsCrud
         public FormAlumno()
         {
             InitializeComponent();
+            dsTutoriasTableAdapters.EscuelaProfesionalTableAdapter ta_ep = new dsTutoriasTableAdapters.EscuelaProfesionalTableAdapter();
+            dsTutorias.EscuelaProfesionalDataTable dt_ep = ta_ep.GetData();
+            for (int i = 0; i < dt_ep.Count; i++)
+            {
+                dsTutorias.EscuelaProfesionalRow row_ep = (dsTutorias.EscuelaProfesionalRow)dt_ep.Rows[i];
+                comboBoxEP.Items.Add(row_ep.Nombre);
+            }
         }
 
         // Buscar:
@@ -52,7 +60,31 @@ namespace WinFormsCrud
                     indice = 0;
                 }
                 string escuela_profesional = (string)comboBoxEP.Items[indice];
-                ta.Insertar(txtCodigo.Text.Trim(), txtNombres.Text.Trim().ToUpper(), txtApellidos.Text.Trim().ToUpper(), escuela_profesional);
+
+                string aux = "";
+                SqlConnection con = new SqlConnection(@"Data Source = .\SQLEXPRESS; Initial Catalog = DBTutorias; Integrated Security = True");
+                dt.CodEPColumn.MaxLength = 100;
+                try
+                {
+                    con.Open();
+                    SqlCommand command = new SqlCommand("select CodEP from EscuelaProfesional where Nombre = @nombre", con);
+                    command.Parameters.AddWithValue("nombre", escuela_profesional);
+                    SqlDataAdapter sda = new SqlDataAdapter(command);
+                    DataTable datatable = new DataTable();
+                    sda.Fill(datatable);
+                    aux = datatable.Rows[0][0].ToString();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+                finally
+                {
+                    con.Close();
+                }
+
+                ta.Insertar(txtCodigo.Text.Trim(), txtNombres.Text.Trim().ToUpper(), txtApellidos.Text.Trim().ToUpper(), aux);
             }
         }
 

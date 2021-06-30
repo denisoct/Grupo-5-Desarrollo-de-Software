@@ -94,6 +94,8 @@ namespace WinFormsCrud
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(157, 20);
             this.txtCodigo.TabIndex = 4;
+            this.txtCodigo.Enter += new System.EventHandler(this.txtCodigo_Enter);
+            this.txtCodigo.Leave += new System.EventHandler(this.txtCodigo_Leave);
             // 
             // txtNombres
             // 

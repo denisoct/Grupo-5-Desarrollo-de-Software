@@ -26,7 +26,7 @@ namespace WinFormsCrud.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=RICARDO-PC;Initial Catalog=DBTutorias;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=DBTutorias;Integrated Security=True")]
         public string DBTutoriasConnectionString {
             get {
                 return ((string)(this["DBTutoriasConnectionString"]));

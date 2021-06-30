@@ -2714,7 +2714,7 @@ SELECT CodAlumno, Nombres, Apellidos, CodEP FROM Alumno WHERE (CodAlumno = @CodA
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodEP", global::System.Data.SqlDbType.VarChar, 8, global::System.Data.ParameterDirection.Input, 0, 0, "CodEP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "insert into EscuelaProfesiona(CodEP, Nombre)\r\nvalues (@CodEP, @Nombre)";
+            this._commandCollection[3].CommandText = "insert into EscuelaProfesional(CodEP, Nombre)\r\nvalues (@CodEP, @Nombre)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodEP", global::System.Data.SqlDbType.Variant, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "CodEP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.Variant, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
