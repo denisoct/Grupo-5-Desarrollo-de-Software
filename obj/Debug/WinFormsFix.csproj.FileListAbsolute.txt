@@ -1,0 +1,90 @@
+C:\Users\deniswin\Desktop\fix\WinFormsFix\bin\Debug\WinFormsFix.exe.config
+C:\Users\deniswin\Desktop\fix\WinFormsFix\bin\Debug\WinFormsFix.exe
+C:\Users\deniswin\Desktop\fix\WinFormsFix\bin\Debug\WinFormsFix.pdb
+C:\Users\deniswin\Desktop\fix\WinFormsFix\obj\Debug\WinFormsFix.csproj.AssemblyReference.cache
+C:\Users\deniswin\Desktop\fix\WinFormsFix\obj\Debug\WinFormsFix.Properties.Resources.resources
+C:\Users\deniswin\Desktop\fix\WinFormsFix\obj\Debug\WinFormsFix.csproj.GenerateResource.cache
+C:\Users\deniswin\Desktop\fix\WinFormsFix\obj\Debug\WinFormsFix.csproj.CoreCompileInputs.cache
+C:\Users\deniswin\Desktop\fix\WinFormsFix\obj\Debug\WinFormsFix.exe
+C:\Users\deniswin\Desktop\fix\WinFormsFix\obj\Debug\WinFormsFix.pdb
+C:\Users\deniswin\Desktop\fix\WinFormsFix\obj\Debug\WinFormsFix.FormLogin.resources
+C:\Users\deniswin\Desktop\fix\WinFormsFix\obj\Debug\WinFormsFix.FormCooordinador.resources
+C:\Users\deniswin\Desktop\fix\WinFormsFix\obj\Debug\WinFormsFix.FormCrudCoordDocente.resources
+C:\Users\deniswin\Desktop\fix\WinFormsFix\obj\Debug\WinFormsFix.FormCrudCoordEstudiante.resources
+C:\Users\deniswin\Desktop\fix\WinFormsFix\obj\Debug\WinFormsFix.FormCrudCoordTutor.resources
+C:\Users\deniswin\Desktop\fix\WinFormsFix\obj\Debug\WinFormsFix.FormTutor.resources
+C:\Users\deniswin\Desktop\fix\WinFormsFix\obj\Debug\WinFormsFix.FormTutorActualizarDatos.resources
+C:\Users\deniswin\Desktop\fix\WinFormsFix\obj\Debug\WinFormsFix.FormTutorBuscarEstudiante.resources
+C:\Users\deniswin\Desktop\fix\WinFormsFix\obj\Debug\WinFormsFix.FormTutorCrearFicha.resources
+C:\Users\deniswin\Desktop\fix\WinFormsFix\obj\Debug\WinFormsFix.FormEstudiante.resources
+C:\Users\deniswin\Desktop\fix\WinFormsFix\obj\Debug\WinFormsFix.FormEstudianteActualizarDatos.resources
+C:\Users\Ricardo\Downloads\WinFormsFix\WinFormsFix\bin\Debug\WinFormsFix.exe.config
+C:\Users\Ricardo\Downloads\WinFormsFix\WinFormsFix\bin\Debug\WinFormsFix.exe
+C:\Users\Ricardo\Downloads\WinFormsFix\WinFormsFix\bin\Debug\WinFormsFix.pdb
+C:\Users\Ricardo\Downloads\WinFormsFix\WinFormsFix\obj\Debug\WinFormsFix.csproj.AssemblyReference.cache
+C:\Users\Ricardo\Downloads\WinFormsFix\WinFormsFix\obj\Debug\WinFormsFix.FormCooordinador.resources
+C:\Users\Ricardo\Downloads\WinFormsFix\WinFormsFix\obj\Debug\WinFormsFix.FormCrudCoordDocente.resources
+C:\Users\Ricardo\Downloads\WinFormsFix\WinFormsFix\obj\Debug\WinFormsFix.FormCrudCoordEstudiante.resources
+C:\Users\Ricardo\Downloads\WinFormsFix\WinFormsFix\obj\Debug\WinFormsFix.FormCrudCoordTutor.resources
+C:\Users\Ricardo\Downloads\WinFormsFix\WinFormsFix\obj\Debug\WinFormsFix.FormEstudiante.resources
+C:\Users\Ricardo\Downloads\WinFormsFix\WinFormsFix\obj\Debug\WinFormsFix.FormEstudianteActualizarDatos.resources
+C:\Users\Ricardo\Downloads\WinFormsFix\WinFormsFix\obj\Debug\WinFormsFix.FormLogin.resources
+C:\Users\Ricardo\Downloads\WinFormsFix\WinFormsFix\obj\Debug\WinFormsFix.FormTutor.resources
+C:\Users\Ricardo\Downloads\WinFormsFix\WinFormsFix\obj\Debug\WinFormsFix.FormTutorActualizarDatos.resources
+C:\Users\Ricardo\Downloads\WinFormsFix\WinFormsFix\obj\Debug\WinFormsFix.FormTutorBuscarEstudiante.resources
+C:\Users\Ricardo\Downloads\WinFormsFix\WinFormsFix\obj\Debug\WinFormsFix.FormTutorCrearFicha.resources
+C:\Users\Ricardo\Downloads\WinFormsFix\WinFormsFix\obj\Debug\WinFormsFix.Properties.Resources.resources
+C:\Users\Ricardo\Downloads\WinFormsFix\WinFormsFix\obj\Debug\WinFormsFix.csproj.GenerateResource.cache
+C:\Users\Ricardo\Downloads\WinFormsFix\WinFormsFix\obj\Debug\WinFormsFix.csproj.CoreCompileInputs.cache
+C:\Users\Ricardo\Downloads\WinFormsFix\WinFormsFix\obj\Debug\WinFormsFix.exe
+C:\Users\Ricardo\Downloads\WinFormsFix\WinFormsFix\obj\Debug\WinFormsFix.pdb
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\bin\Debug\WinFormsFix.exe.config
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\bin\Debug\WinFormsFix.exe
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\bin\Debug\WinFormsFix.pdb
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.csproj.AssemblyReference.cache
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.FormCrudCoordDocente.resources
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.FormCrudCoordEstudiante.resources
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.FormCrudCoordTutor.resources
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.FormEstudiante.resources
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.FormEstudianteActualizarDatos.resources
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.FormLogin.resources
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.FormTutor.resources
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.FormTutorActualizarDatos.resources
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.FormTutorBuscarEstudiante.resources
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.FormTutorCrearFicha.resources
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.Properties.Resources.resources
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.csproj.GenerateResource.cache
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.csproj.CoreCompileInputs.cache
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.exe
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.pdb
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.FormCoordBuscarFichaTutoria.resources
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.FormCoordInforme.resources
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.FormCoordinador.resources
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.FormCoordTablas.resources
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.FormTutorTutorias.resources
+C:\Users\Ricardo\Desktop\GIT\WinFormsFix\obj\Debug\WinFormsFix.FormTutorEstudiantes.resources
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.csproj.AssemblyReference.cache
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.FormCoordinador.resources
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.FormCoordBuscarFichaTutoria.resources
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.FormTutorTutorias.resources
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.FormTutorEstudiantes.resources
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.FormCoordInforme.resources
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.FormCrudCoordDocente.resources
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.FormCoordTablas.resources
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.FormCrudCoordEstudiante.resources
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.FormCrudCoordTutor.resources
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.FormEstudiante.resources
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.FormEstudianteActualizarDatos.resources
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.FormLogin.resources
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.FormTutor.resources
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.FormTutorActualizarDatos.resources
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.FormTutorBuscarEstudiante.resources
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.FormTutorCrearFicha.resources
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.Properties.Resources.resources
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.csproj.GenerateResource.cache
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.csproj.CoreCompileInputs.cache
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.exe
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\obj\Debug\WinFormsFix.pdb
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\bin\Debug\WinFormsFix.exe.config
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\bin\Debug\WinFormsFix.exe
+C:\Users\deniswin\Desktop\ultimo 26\WinFormsFix\bin\Debug\WinFormsFix.pdb
