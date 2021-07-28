@@ -32,7 +32,7 @@ namespace WinFormsFix
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.labellMensaje = new System.Windows.Forms.Label();
+            this.labelMensaje = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelCatRegTipo = new System.Windows.Forms.Label();
             this.labelTipoContrato = new System.Windows.Forms.Label();
@@ -82,7 +82,7 @@ namespace WinFormsFix
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.labellMensaje);
+            this.groupBox6.Controls.Add(this.labelMensaje);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox6.Location = new System.Drawing.Point(0, 414);
             this.groupBox6.Name = "groupBox6";
@@ -91,15 +91,15 @@ namespace WinFormsFix
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Mensaje:";
             // 
-            // labellMensaje
+            // labelMensaje
             // 
-            this.labellMensaje.AutoSize = true;
-            this.labellMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labellMensaje.Location = new System.Drawing.Point(7, 20);
-            this.labellMensaje.Name = "labellMensaje";
-            this.labellMensaje.Size = new System.Drawing.Size(116, 15);
-            this.labellMensaje.TabIndex = 0;
-            this.labellMensaje.Text = "Se agrego con éxito";
+            this.labelMensaje.AutoSize = true;
+            this.labelMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMensaje.Location = new System.Drawing.Point(7, 20);
+            this.labelMensaje.Name = "labelMensaje";
+            this.labelMensaje.Size = new System.Drawing.Size(116, 15);
+            this.labelMensaje.TabIndex = 0;
+            this.labelMensaje.Text = "Se agrego con éxito";
             // 
             // panel1
             // 
@@ -258,6 +258,7 @@ namespace WinFormsFix
             this.buttonActualizarTutor.TabIndex = 9;
             this.buttonActualizarTutor.Text = "Actualizar";
             this.buttonActualizarTutor.UseVisualStyleBackColor = true;
+            this.buttonActualizarTutor.Click += new System.EventHandler(this.buttonActualizarTutor_Click);
             // 
             // label9
             // 
@@ -346,7 +347,7 @@ namespace WinFormsFix
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label labellMensaje;
+        private System.Windows.Forms.Label labelMensaje;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelCatRegTipo;
         private System.Windows.Forms.Label labelTipoContrato;

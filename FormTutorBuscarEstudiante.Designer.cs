@@ -64,7 +64,7 @@ namespace WinFormsFix
             // buttonBuscarEstudianteCodigo
             // 
             this.buttonBuscarEstudianteCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscarEstudianteCodigo.Location = new System.Drawing.Point(426, 18);
+            this.buttonBuscarEstudianteCodigo.Location = new System.Drawing.Point(435, 18);
             this.buttonBuscarEstudianteCodigo.Name = "buttonBuscarEstudianteCodigo";
             this.buttonBuscarEstudianteCodigo.Size = new System.Drawing.Size(84, 25);
             this.buttonBuscarEstudianteCodigo.TabIndex = 32;
@@ -75,7 +75,7 @@ namespace WinFormsFix
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 21);
+            this.label2.Location = new System.Drawing.Point(60, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 17);
             this.label2.TabIndex = 34;
@@ -83,7 +83,7 @@ namespace WinFormsFix
             // 
             // textBoxCodEstudiante
             // 
-            this.textBoxCodEstudiante.Location = new System.Drawing.Point(190, 21);
+            this.textBoxCodEstudiante.Location = new System.Drawing.Point(205, 21);
             this.textBoxCodEstudiante.Name = "textBoxCodEstudiante";
             this.textBoxCodEstudiante.Size = new System.Drawing.Size(100, 20);
             this.textBoxCodEstudiante.TabIndex = 35;
@@ -166,7 +166,7 @@ namespace WinFormsFix
             // buttonSolicitar
             // 
             this.buttonSolicitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSolicitar.Location = new System.Drawing.Point(471, 268);
+            this.buttonSolicitar.Location = new System.Drawing.Point(459, 268);
             this.buttonSolicitar.Name = "buttonSolicitar";
             this.buttonSolicitar.Size = new System.Drawing.Size(54, 20);
             this.buttonSolicitar.TabIndex = 59;

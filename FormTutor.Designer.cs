@@ -91,7 +91,7 @@ namespace WinFormsFix
             this.buttonVerTutorias.Name = "buttonVerTutorias";
             this.buttonVerTutorias.Size = new System.Drawing.Size(223, 30);
             this.buttonVerTutorias.TabIndex = 21;
-            this.buttonVerTutorias.Text = "Ver Tutorias";
+            this.buttonVerTutorias.Text = "Ver Fichas de Tutorias";
             this.buttonVerTutorias.UseVisualStyleBackColor = true;
             this.buttonVerTutorias.Click += new System.EventHandler(this.buttonVerTutorias_Click_1);
             // 
@@ -403,6 +403,7 @@ namespace WinFormsFix
             this.MinimumSize = new System.Drawing.Size(870, 564);
             this.Name = "FormTutor";
             this.Text = "FormTutor";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormTutor_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserImage)).EndInit();

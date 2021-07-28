@@ -357,6 +357,7 @@ namespace WinFormsFix
             this.MaximumSize = new System.Drawing.Size(870, 564);
             this.Name = "FormEstudiante";
             this.Text = "FormEstudiante";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormEstudiante_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserImage)).EndInit();

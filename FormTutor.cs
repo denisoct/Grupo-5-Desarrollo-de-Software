@@ -29,15 +29,48 @@ namespace WinFormsFix
             dsTutorias.DocenteRow row = (dsTutorias.DocenteRow)dt[0];
             labelCodigoDocente.Text = row.CodDocente;
             labelNombresDocente.Text = row.Nombres;
-            labelEPDocente.Text = row.CodEP;
+            labelApellidosDocente.Text = row.Apellidos;
+            labelEPDocente.Text = "INGENIERIA INFORMATICA Y DE SISTEMAS";
             labelTipoContratoDocente.Text = row.TipoContrato;
-            if (row.TipoContrato == "NOMBRADO")
-                labelCategoriaRegimenDocente.Text = row.Categoria + " - " + row.Regimen;
-            else
-                labelCategoriaRegimenDocente.Text = row.Tipo;
             labelEmailDocente.Text = row.Email;
             labelDireccionDocente.Text = row.Dirección;
             labelCelularDocente.Text = row.Celular;
+
+            if (row.TipoContrato == "NOMBRADO")
+            {
+                if (row.Categoria == "PR" && row.Regimen == "DE")
+                {
+                    labelCategoriaRegimenDocente.Text = "PRINCIPAL - DEDICACIÓN EXCLUSIVA";
+                }
+                if (row.Categoria == "PR" && row.Regimen == "TC")
+                {
+                    labelCategoriaRegimenDocente.Text = "PRINCIPAL - TIEMPO COMPLETO";
+                }
+                if (row.Categoria == "AS" && row.Regimen == "DE")
+                {
+                    labelCategoriaRegimenDocente.Text = "ASOCIADO - DEDICACIÓN EXCLUSIVA";
+                }
+                if (row.Categoria == "AS" && row.Regimen == "TC")
+                {
+                    labelCategoriaRegimenDocente.Text = "ASOCIADO - TIEMPO COMPLETO";
+                }
+                if (row.Categoria == "AS" && row.Regimen == "TP")
+                {
+                    labelCategoriaRegimenDocente.Text = "ASOCIADO - TIEMPO PARCIAL";
+                }
+                if (row.Categoria == "AU" && row.Regimen == "TC")
+                {
+                    labelCategoriaRegimenDocente.Text = "AUXILIAR - TIEMPO COMPLETO";
+                }
+                if (row.Categoria == "AU" && row.Regimen == "TP")
+                {
+                    labelCategoriaRegimenDocente.Text = "AUXILIAR - TIEMPO PARCIAL";
+                }
+            }
+            if (row.TipoContrato == "CONTRATADO")
+            {
+                labelCategoriaRegimenDocente.Text = row.Tipo;
+            }
         }
 
         private Form activeForm = null;
@@ -58,7 +91,7 @@ namespace WinFormsFix
         // Actualizar datos:
         private void buttonActualizarDatos_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormTutorActualizarDatos());
+            openChildForm(new FormTutorActualizarDatos(CodTutor));
         }
 
         // Ver tutorias:
@@ -87,9 +120,15 @@ namespace WinFormsFix
 
         private void label1_Click(object sender, EventArgs e)
         {
-            activeForm.Close();
+            if (activeForm != null) activeForm.Close();
+            FillPersonalData(labelCodigoDocente.Text);
             groupBoxDatosPersonales.BringToFront();
             groupBoxDatosPersonales.Show();
+        }
+
+        private void FormTutor_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

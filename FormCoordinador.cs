@@ -111,8 +111,14 @@ namespace WinFormsFix
         private void labelNombresB_Click(object sender, EventArgs e)
         {
             activeForm.Close();
+            FillPersonalData(labelCodigoCoordinador.Text);
             groupBoxDatosPersonales.BringToFront();
             groupBoxDatosPersonales.Show();
+        }
+
+        private void FormCoordinador_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -60,7 +60,7 @@ namespace WinFormsFix
             // 
             this.labelTitulo.AutoSize = true;
             this.labelTitulo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitulo.Location = new System.Drawing.Point(209, 15);
+            this.labelTitulo.Location = new System.Drawing.Point(253, 15);
             this.labelTitulo.Name = "labelTitulo";
             this.labelTitulo.Size = new System.Drawing.Size(103, 18);
             this.labelTitulo.TabIndex = 17;
@@ -73,7 +73,7 @@ namespace WinFormsFix
             this.flowLayoutPanel1.Controls.Add(this.dataGridView1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 50);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(607, 431);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(607, 399);
             this.flowLayoutPanel1.TabIndex = 91;
             // 
             // groupBox11
@@ -120,14 +120,14 @@ namespace WinFormsFix
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 75);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(604, 356);
+            this.dataGridView1.Size = new System.Drawing.Size(604, 323);
             this.dataGridView1.TabIndex = 42;
             // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.labelMensaje);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox6.Location = new System.Drawing.Point(0, 487);
+            this.groupBox6.Location = new System.Drawing.Point(0, 456);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(607, 72);
             this.groupBox6.TabIndex = 92;
@@ -148,7 +148,7 @@ namespace WinFormsFix
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 559);
+            this.ClientSize = new System.Drawing.Size(607, 528);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel3);

@@ -420,6 +420,7 @@ namespace WinFormsFix
             this.MinimumSize = new System.Drawing.Size(870, 564);
             this.Name = "FormCoordinador";
             this.Text = "FormCooordinador";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormCoordinador_FormClosed);
             this.panelChildForm.ResumeLayout(false);
             this.groupBoxDatosPersonales.ResumeLayout(false);
             this.groupBoxDatosPersonales.PerformLayout();

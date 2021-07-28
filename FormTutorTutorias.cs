@@ -31,7 +31,7 @@ namespace WinFormsFix
             }
             else
             {
-                dsTutorias.FichaTutoriasDataTable dtt = ta.GetDataByDocente(CodigoTutor, txtSemestre.Text);
+                dsTutorias.FichaTutoriasDataTable dtt = ta.GetDataByCodDocente(CodigoTutor, txtSemestre.Text);
                 dataGridView1.DataSource = dtt;
                 labelMensaje.Text = "Fichas de Tutoria. Semestre: " + txtSemestre.Text + " Total registros: " + dt.Rows.Count.ToString();
             }

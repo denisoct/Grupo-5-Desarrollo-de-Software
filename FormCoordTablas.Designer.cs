@@ -65,7 +65,7 @@ namespace WinFormsFix
             // 
             this.groupBox6.Controls.Add(this.labelMensaje);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox6.Location = new System.Drawing.Point(0, 490);
+            this.groupBox6.Location = new System.Drawing.Point(0, 488);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(607, 72);
             this.groupBox6.TabIndex = 90;
@@ -87,7 +87,7 @@ namespace WinFormsFix
             this.flowLayoutPanel1.Controls.Add(this.dataGridView1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 50);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(607, 434);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(607, 397);
             this.flowLayoutPanel1.TabIndex = 91;
             // 
             // dataGridView1
@@ -95,19 +95,19 @@ namespace WinFormsFix
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(604, 431);
+            this.dataGridView1.Size = new System.Drawing.Size(604, 395);
             this.dataGridView1.TabIndex = 0;
             // 
-            // FormCoordDatos
+            // FormCoordTablas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 562);
+            this.ClientSize = new System.Drawing.Size(607, 560);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormCoordDatos";
+            this.Name = "FormCoordTablas";
             this.Text = "FormCrudCoordEstudiante";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

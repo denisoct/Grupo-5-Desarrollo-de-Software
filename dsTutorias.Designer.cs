@@ -50,6 +50,10 @@ namespace WinFormsFix {
         
         private global::System.Data.DataRelation relationFK__Tutor__CodEstudi__249272082;
         
+        private global::System.Data.DataRelation relationFK__FichaTuto__CodDo__276EDEB3;
+        
+        private global::System.Data.DataRelation relationFK__Tutor__CodDocent__239E4DCF1;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -335,6 +339,8 @@ namespace WinFormsFix {
             this.relationFK__Tutor__CodEstudi__249272081 = this.Relations["FK__Tutor__CodEstudi__249272081"];
             this.relationFK__FichaTuto__CodEs__286302EC1 = this.Relations["FK__FichaTuto__CodEs__286302EC1"];
             this.relationFK__Tutor__CodEstudi__249272082 = this.Relations["FK__Tutor__CodEstudi__249272082"];
+            this.relationFK__FichaTuto__CodDo__276EDEB3 = this.Relations["FK__FichaTuto__CodDo__276EDEB3"];
+            this.relationFK__Tutor__CodDocent__239E4DCF1 = this.Relations["FK__Tutor__CodDocent__239E4DCF1"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -385,6 +391,14 @@ namespace WinFormsFix {
                         this.tableFichaTutorias.CodEstudianteColumn}, new global::System.Data.DataColumn[] {
                         this.tableTutor.CodEstudianteColumn}, false);
             this.Relations.Add(this.relationFK__Tutor__CodEstudi__249272082);
+            this.relationFK__FichaTuto__CodDo__276EDEB3 = new global::System.Data.DataRelation("FK__FichaTuto__CodDo__276EDEB3", new global::System.Data.DataColumn[] {
+                        this.tableDocente.CodDocenteColumn}, new global::System.Data.DataColumn[] {
+                        this.tableFichaTutorias.CodDocenteColumn}, false);
+            this.Relations.Add(this.relationFK__FichaTuto__CodDo__276EDEB3);
+            this.relationFK__Tutor__CodDocent__239E4DCF1 = new global::System.Data.DataRelation("FK__Tutor__CodDocent__239E4DCF1", new global::System.Data.DataColumn[] {
+                        this.tableFichaTutorias.CodDocenteColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTutor.CodDocenteColumn}, false);
+            this.Relations.Add(this.relationFK__Tutor__CodDocent__239E4DCF1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2206,9 +2220,23 @@ namespace WinFormsFix {
             
             private global::System.Data.DataColumn columnCodEstudiante;
             
-            private global::System.Data.DataColumn columnNombres;
+            private global::System.Data.DataColumn columnIdTutoria;
             
-            private global::System.Data.DataColumn columnApellidos;
+            private global::System.Data.DataColumn columnSemestre;
+            
+            private global::System.Data.DataColumn columnFecha;
+            
+            private global::System.Data.DataColumn columnHorario;
+            
+            private global::System.Data.DataColumn columnLugar;
+            
+            private global::System.Data.DataColumn columnActividad;
+            
+            private global::System.Data.DataColumn columnCodDocente;
+            
+            private global::System.Data.DataColumn columnReferencia;
+            
+            private global::System.Data.DataColumn columnDescripción;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -2253,17 +2281,73 @@ namespace WinFormsFix {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn NombresColumn {
+            public global::System.Data.DataColumn IdTutoriaColumn {
                 get {
-                    return this.columnNombres;
+                    return this.columnIdTutoria;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ApellidosColumn {
+            public global::System.Data.DataColumn SemestreColumn {
                 get {
-                    return this.columnApellidos;
+                    return this.columnSemestre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FechaColumn {
+                get {
+                    return this.columnFecha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn HorarioColumn {
+                get {
+                    return this.columnHorario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LugarColumn {
+                get {
+                    return this.columnLugar;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ActividadColumn {
+                get {
+                    return this.columnActividad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CodDocenteColumn {
+                get {
+                    return this.columnCodDocente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ReferenciaColumn {
+                get {
+                    return this.columnReferencia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DescripciónColumn {
+                get {
+                    return this.columnDescripción;
                 }
             }
             
@@ -2304,14 +2388,24 @@ namespace WinFormsFix {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FichaTutoriasRow AddFichaTutoriasRow(EstudianteRow parentEstudianteRowByFK__FichaTuto__CodEs__286302EC, string Nombres, string Apellidos) {
+            public FichaTutoriasRow AddFichaTutoriasRow(EstudianteRow parentEstudianteRowByFK__FichaTuto__CodEs__286302EC, string Semestre, System.DateTime Fecha, System.TimeSpan Horario, string Lugar, string Actividad, DocenteRow parentDocenteRowByFK__FichaTuto__CodDo__276EDEB3, string Referencia, string Descripción) {
                 FichaTutoriasRow rowFichaTutoriasRow = ((FichaTutoriasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Nombres,
-                        Apellidos};
+                        null,
+                        Semestre,
+                        Fecha,
+                        Horario,
+                        Lugar,
+                        Actividad,
+                        null,
+                        Referencia,
+                        Descripción};
                 if ((parentEstudianteRowByFK__FichaTuto__CodEs__286302EC != null)) {
                     columnValuesArray[0] = parentEstudianteRowByFK__FichaTuto__CodEs__286302EC[0];
+                }
+                if ((parentDocenteRowByFK__FichaTuto__CodDo__276EDEB3 != null)) {
+                    columnValuesArray[7] = parentDocenteRowByFK__FichaTuto__CodDo__276EDEB3[0];
                 }
                 rowFichaTutoriasRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFichaTutoriasRow);
@@ -2320,9 +2414,9 @@ namespace WinFormsFix {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FichaTutoriasRow FindByCodEstudiante(string CodEstudiante) {
+            public FichaTutoriasRow FindByIdTutoria(int IdTutoria) {
                 return ((FichaTutoriasRow)(this.Rows.Find(new object[] {
-                            CodEstudiante})));
+                            IdTutoria})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2343,8 +2437,15 @@ namespace WinFormsFix {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnCodEstudiante = base.Columns["CodEstudiante"];
-                this.columnNombres = base.Columns["Nombres"];
-                this.columnApellidos = base.Columns["Apellidos"];
+                this.columnIdTutoria = base.Columns["IdTutoria"];
+                this.columnSemestre = base.Columns["Semestre"];
+                this.columnFecha = base.Columns["Fecha"];
+                this.columnHorario = base.Columns["Horario"];
+                this.columnLugar = base.Columns["Lugar"];
+                this.columnActividad = base.Columns["Actividad"];
+                this.columnCodDocente = base.Columns["CodDocente"];
+                this.columnReferencia = base.Columns["Referencia"];
+                this.columnDescripción = base.Columns["Descripción"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2352,19 +2453,46 @@ namespace WinFormsFix {
             private void InitClass() {
                 this.columnCodEstudiante = new global::System.Data.DataColumn("CodEstudiante", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCodEstudiante);
-                this.columnNombres = new global::System.Data.DataColumn("Nombres", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNombres);
-                this.columnApellidos = new global::System.Data.DataColumn("Apellidos", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnApellidos);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnCodEstudiante}, true));
+                this.columnIdTutoria = new global::System.Data.DataColumn("IdTutoria", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIdTutoria);
+                this.columnSemestre = new global::System.Data.DataColumn("Semestre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSemestre);
+                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha);
+                this.columnHorario = new global::System.Data.DataColumn("Horario", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHorario);
+                this.columnLugar = new global::System.Data.DataColumn("Lugar", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLugar);
+                this.columnActividad = new global::System.Data.DataColumn("Actividad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnActividad);
+                this.columnCodDocente = new global::System.Data.DataColumn("CodDocente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCodDocente);
+                this.columnReferencia = new global::System.Data.DataColumn("Referencia", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnReferencia);
+                this.columnDescripción = new global::System.Data.DataColumn("Descripción", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDescripción);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint2", new global::System.Data.DataColumn[] {
+                                this.columnIdTutoria}, true));
                 this.columnCodEstudiante.AllowDBNull = false;
-                this.columnCodEstudiante.Unique = true;
                 this.columnCodEstudiante.MaxLength = 6;
-                this.columnNombres.AllowDBNull = false;
-                this.columnNombres.MaxLength = 45;
-                this.columnApellidos.AllowDBNull = false;
-                this.columnApellidos.MaxLength = 45;
+                this.columnIdTutoria.AutoIncrement = true;
+                this.columnIdTutoria.AutoIncrementSeed = -1;
+                this.columnIdTutoria.AutoIncrementStep = -1;
+                this.columnIdTutoria.AllowDBNull = false;
+                this.columnIdTutoria.ReadOnly = true;
+                this.columnIdTutoria.Unique = true;
+                this.columnSemestre.AllowDBNull = false;
+                this.columnSemestre.MaxLength = 10;
+                this.columnFecha.AllowDBNull = false;
+                this.columnHorario.AllowDBNull = false;
+                this.columnLugar.AllowDBNull = false;
+                this.columnLugar.MaxLength = 25;
+                this.columnActividad.AllowDBNull = false;
+                this.columnActividad.MaxLength = 100;
+                this.columnCodDocente.AllowDBNull = false;
+                this.columnCodDocente.MaxLength = 5;
+                this.columnReferencia.MaxLength = 25;
+                this.columnDescripción.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2738,6 +2866,17 @@ namespace WinFormsFix {
                     return ((TutorRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Tutor__CodDocent__239E4DCF"])));
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FichaTutoriasRow[] GetFichaTutoriasRows() {
+                if ((this.Table.ChildRelations["FK__FichaTuto__CodDo__276EDEB3"] == null)) {
+                    return new FichaTutoriasRow[0];
+                }
+                else {
+                    return ((FichaTutoriasRow[])(base.GetChildRows(this.Table.ChildRelations["FK__FichaTuto__CodDo__276EDEB3"])));
+                }
+            }
         }
         
         /// <summary>
@@ -2839,6 +2978,17 @@ namespace WinFormsFix {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK__Tutor__CodEstudi__249272082"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FichaTutoriasRow FichaTutoriasRowByFK__Tutor__CodDocent__239E4DCF1 {
+                get {
+                    return ((FichaTutoriasRow)(this.GetParentRow(this.Table.ParentRelations["FK__Tutor__CodDocent__239E4DCF1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Tutor__CodDocent__239E4DCF1"]);
                 }
             }
         }
@@ -3197,23 +3347,110 @@ namespace WinFormsFix {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Nombres {
+            public int IdTutoria {
                 get {
-                    return ((string)(this[this.tableFichaTutorias.NombresColumn]));
+                    return ((int)(this[this.tableFichaTutorias.IdTutoriaColumn]));
                 }
                 set {
-                    this[this.tableFichaTutorias.NombresColumn] = value;
+                    this[this.tableFichaTutorias.IdTutoriaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Apellidos {
+            public string Semestre {
                 get {
-                    return ((string)(this[this.tableFichaTutorias.ApellidosColumn]));
+                    return ((string)(this[this.tableFichaTutorias.SemestreColumn]));
                 }
                 set {
-                    this[this.tableFichaTutorias.ApellidosColumn] = value;
+                    this[this.tableFichaTutorias.SemestreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Fecha {
+                get {
+                    return ((global::System.DateTime)(this[this.tableFichaTutorias.FechaColumn]));
+                }
+                set {
+                    this[this.tableFichaTutorias.FechaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.TimeSpan Horario {
+                get {
+                    return ((global::System.TimeSpan)(this[this.tableFichaTutorias.HorarioColumn]));
+                }
+                set {
+                    this[this.tableFichaTutorias.HorarioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Lugar {
+                get {
+                    return ((string)(this[this.tableFichaTutorias.LugarColumn]));
+                }
+                set {
+                    this[this.tableFichaTutorias.LugarColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Actividad {
+                get {
+                    return ((string)(this[this.tableFichaTutorias.ActividadColumn]));
+                }
+                set {
+                    this[this.tableFichaTutorias.ActividadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string CodDocente {
+                get {
+                    return ((string)(this[this.tableFichaTutorias.CodDocenteColumn]));
+                }
+                set {
+                    this[this.tableFichaTutorias.CodDocenteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Referencia {
+                get {
+                    try {
+                        return ((string)(this[this.tableFichaTutorias.ReferenciaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Referencia\' de la tabla \'FichaTutorias\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFichaTutorias.ReferenciaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Descripción {
+                get {
+                    try {
+                        return ((string)(this[this.tableFichaTutorias.DescripciónColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Descripción\' de la tabla \'FichaTutorias\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFichaTutorias.DescripciónColumn] = value;
                 }
             }
             
@@ -3241,12 +3478,58 @@ namespace WinFormsFix {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public DocenteRow DocenteRow {
+                get {
+                    return ((DocenteRow)(this.GetParentRow(this.Table.ParentRelations["FK__FichaTuto__CodDo__276EDEB3"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__FichaTuto__CodDo__276EDEB3"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsReferenciaNull() {
+                return this.IsNull(this.tableFichaTutorias.ReferenciaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetReferenciaNull() {
+                this[this.tableFichaTutorias.ReferenciaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDescripciónNull() {
+                return this.IsNull(this.tableFichaTutorias.DescripciónColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDescripciónNull() {
+                this[this.tableFichaTutorias.DescripciónColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public TutorRow[] GetTutorRows() {
                 if ((this.Table.ChildRelations["FK__Tutor__CodEstudi__249272082"] == null)) {
                     return new TutorRow[0];
                 }
                 else {
                     return ((TutorRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Tutor__CodEstudi__249272082"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public TutorRow[] GetTutorRowsByFK__Tutor__CodDocent__239E4DCF1() {
+                if ((this.Table.ChildRelations["FK__Tutor__CodDocent__239E4DCF1"] == null)) {
+                    return new TutorRow[0];
+                }
+                else {
+                    return ((TutorRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Tutor__CodDocent__239E4DCF1"])));
                 }
             }
         }
@@ -3700,9 +3983,9 @@ SELECT CodDocente, Nombres, Apellidos, CodEP, TipoContrato, Categoria, Regimen, 
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
             this._commandCollection[4].CommandText = "INSERT INTO Docente(CodDocente, Nombres, Apellidos, CodEP, TipoContrato, Categori" +
-                "a, Regimen, Tipo, Email, Dirección, Celular)\r\nvalues (@CodDocente, @Nombres, @Ap" +
-                "ellidos, @CodEP, @TipoContrato, @Categoria, @Regimen, @Tipo, @Email, @Direccion," +
-                " @Celular)";
+                "a, Regimen, Tipo, Email, Dirección, Celular)\nvalues (@CodDocente, @Nombres, @Ape" +
+                "llidos, @CodEP, @TipoContrato, @Categoria, @Regimen, @Tipo, @Email, @Direccion, " +
+                "@Celular)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodDocente", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "CodDocente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombres", global::System.Data.SqlDbType.VarChar, 45, global::System.Data.ParameterDirection.Input, 0, 0, "Nombres", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4607,8 +4890,8 @@ WHERE CodDocente = @CodDocente";
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [Tutor] ([CodDocente], [Semestre], [CodEstudiante]) VALUES (@CodDocen" +
-                "te, @Semestre, @CodEstudiante);\r\nSELECT IdTutor, CodDocente, Semestre, CodEstudi" +
-                "ante FROM Tutor WHERE (IdTutor = SCOPE_IDENTITY())";
+                "te, @Semestre, @CodEstudiante);\nSELECT IdTutor, CodDocente, Semestre, CodEstudia" +
+                "nte FROM Tutor WHERE (IdTutor = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodDocente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodDocente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Semestre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4645,18 +4928,19 @@ SELECT IdTutor, CodDocente, Semestre, CodEstudiante FROM Tutor WHERE (IdTutor = 
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "DELETE FROM Tutor\r\nWHERE CodEstudiante = @CodEstudiante AND CodDocente = @CodDoce" +
-                "nte AND Semestre = @Semestre";
+            this._commandCollection[1].CommandText = "DELETE FROM Tutor\nWHERE CodEstudiante = @CodEstudiante AND CodDocente = @CodDocen" +
+                "te AND Semestre = @Semestre";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodEstudiante", global::System.Data.SqlDbType.VarChar, 6, global::System.Data.ParameterDirection.Input, 0, 0, "CodEstudiante", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodDocente", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "CodDocente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestre", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Semestre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT T.CodEstudiante, E.Nombres, E.Apellidos FROM Tutor T, Estudiante E\r\nWHERE " +
-                "(T.CodEstudiante = E.CodEstudiante) AND (T.CodDocente = @CodDocente)";
+            this._commandCollection[2].CommandText = "SELECT * FROM Tutor \n WHERE (CodDocente = @CodDocente) AND (Semestre = @Semestre)" +
+                "";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodDocente", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "CodDocente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestre", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Semestre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "SELECT * FROM Tutor WHERE CodDocente = @CodDocente";
@@ -4664,8 +4948,8 @@ SELECT IdTutor, CodDocente, Semestre, CodEstudiante FROM Tutor WHERE (IdTutor = 
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodDocente", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "CodDocente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "INSERT INTO Tutor(CodDocente, Semestre, CodEstudiante)\r\nVALUES (@CodDocente, @Sem" +
-                "estre, @CodEstudiante)";
+            this._commandCollection[4].CommandText = "INSERT INTO Tutor(CodDocente, Semestre, CodEstudiante)\nVALUES (@CodDocente, @Seme" +
+                "stre, @CodEstudiante)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodDocente", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "CodDocente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestre", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Semestre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4700,13 +4984,19 @@ SELECT IdTutor, CodDocente, Semestre, CodEstudiante FROM Tutor WHERE (IdTutor = 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(dsTutorias.TutorDataTable dataTable, string CodDocente) {
+        public virtual int FillBy(dsTutorias.TutorDataTable dataTable, string CodDocente, string Semestre) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((CodDocente == null)) {
                 throw new global::System.ArgumentNullException("CodDocente");
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(CodDocente));
+            }
+            if ((Semestre == null)) {
+                throw new global::System.ArgumentNullException("Semestre");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Semestre));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4719,13 +5009,19 @@ SELECT IdTutor, CodDocente, Semestre, CodEstudiante FROM Tutor WHERE (IdTutor = 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual dsTutorias.TutorDataTable GetEstudiantesByCodTutor(string CodDocente) {
+        public virtual dsTutorias.TutorDataTable GetEstudiantesByCodTutor(string CodDocente, string Semestre) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((CodDocente == null)) {
                 throw new global::System.ArgumentNullException("CodDocente");
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(CodDocente));
+            }
+            if ((Semestre == null)) {
+                throw new global::System.ArgumentNullException("Semestre");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Semestre));
             }
             dsTutorias.TutorDataTable dataTable = new dsTutorias.TutorDataTable();
             this.Adapter.Fill(dataTable);
@@ -5239,8 +5535,8 @@ SELECT CodEstudiante, Nombres, Apellidos, CodEP, Email, Dirección, Celular, Inf
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "INSERT INTO Estudiante(CodEstudiante, Nombres, Apellidos, CodEP, Email, Dirección" +
-                ", Celular, InformaciónPersonal)\r\nVALUES (@CodEstudiante, @Nombres, @Apellidos, @" +
-                "CodEP, @Email, @Dirección, @Celular, @InformaciónPersonal)";
+                ", Celular, InformaciónPersonal)\nVALUES (@CodEstudiante, @Nombres, @Apellidos, @C" +
+                "odEP, @Email, @Dirección, @Celular, @InformaciónPersonal)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodEstudiante", global::System.Data.SqlDbType.VarChar, 6, global::System.Data.ParameterDirection.Input, 0, 0, "CodEstudiante", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombres", global::System.Data.SqlDbType.VarChar, 45, global::System.Data.ParameterDirection.Input, 0, 0, "Nombres", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5254,7 +5550,7 @@ SELECT CodEstudiante, Nombres, Apellidos, CodEP, Email, Dirección, Celular, Inf
             this._commandCollection[4].Connection = this.Connection;
             this._commandCollection[4].CommandText = "UPDATE Estudiante SET Nombres = @Nombres, Apellidos = @Apellidos, CodEP = @CodEP," +
                 " Email = @Email, Dirección = @Dirección, Celular = @Celular, InformaciónPersonal" +
-                " = @InformaciónPersonal\r\nWHERE CodEstudiante = @CodEstudiante";
+                " = @InformaciónPersonal\nWHERE CodEstudiante = @CodEstudiante";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombres", global::System.Data.SqlDbType.VarChar, 45, global::System.Data.ParameterDirection.Input, 0, 0, "Nombres", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Apellidos", global::System.Data.SqlDbType.VarChar, 45, global::System.Data.ParameterDirection.Input, 0, 0, "Apellidos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5958,9 +6254,9 @@ SELECT CodEstudiante, Nombres, Apellidos, CodEP, Email, Dirección, Celular, Inf
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT E.CodEstudiante, E.Nombres, E.Apellidos\r\nFROM Estudiante E, RiesgoAcademic" +
-                "o RA\r\nWHERE (E.CodEstudiante = RA.CodEstudiante) AND (RA.EstaRiesgo = \'SI\') AND " +
-                "(E.CodEP = @CodEP)";
+            this._commandCollection[0].CommandText = "SELECT E.CodEstudiante, E.Nombres, E.Apellidos\nFROM Estudiante E, RiesgoAcademico" +
+                " RA\nWHERE (E.CodEstudiante = RA.CodEstudiante) AND (RA.EstaRiesgo = \'SI\') AND (E" +
+                ".CodEP = @CodEP)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodEP", global::System.Data.SqlDbType.VarChar, 8, global::System.Data.ParameterDirection.Input, 0, 0, "CodEP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -6335,8 +6631,15 @@ SELECT CodEstudiante, Nombres, Apellidos, CodEP, Email, Dirección, Celular, Inf
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "FichaTutorias";
             tableMapping.ColumnMappings.Add("CodEstudiante", "CodEstudiante");
-            tableMapping.ColumnMappings.Add("Nombres", "Nombres");
-            tableMapping.ColumnMappings.Add("Apellidos", "Apellidos");
+            tableMapping.ColumnMappings.Add("IdTutoria", "IdTutoria");
+            tableMapping.ColumnMappings.Add("Semestre", "Semestre");
+            tableMapping.ColumnMappings.Add("Fecha", "Fecha");
+            tableMapping.ColumnMappings.Add("Horario", "Horario");
+            tableMapping.ColumnMappings.Add("Lugar", "Lugar");
+            tableMapping.ColumnMappings.Add("Actividad", "Actividad");
+            tableMapping.ColumnMappings.Add("CodDocente", "CodDocente");
+            tableMapping.ColumnMappings.Add("Referencia", "Referencia");
+            tableMapping.ColumnMappings.Add("Descripción", "Descripción");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -6350,62 +6653,54 @@ SELECT CodEstudiante, Nombres, Apellidos, CodEP, Email, Dirección, Celular, Inf
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT DISTINCT E.CodEstudiante, E.Nombres, E.Apellidos\r\nFROM FichaTutorias FT, E" +
-                "studiante E \r\nWHERE (E.CodEstudiante = FT.CodEstudiante) AND (FT.Semestre = @Sem" +
-                "estre) AND (FT.CodDocente = @CodDocente)";
+            this._commandCollection[0].CommandText = "SELECT * FROM FichaTutorias ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestre", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Semestre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodDocente", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "CodDocente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT * FROM FichaTutorias\r\nWHERE (Semestre =@Semestre) AND (CodDocente = @CodDo" +
-                "cente)";
+            this._commandCollection[1].CommandText = "SELECT DISTINCT E.CodEstudiante, E.Nombres, E.Apellidos \nFROM FichaTutorias FT, E" +
+                "studiante E \nWHERE (E.CodEstudiante = FT.CodEstudiante) AND (FT.CodDocente = @Co" +
+                "dDocente) AND (FT.Semestre = @Semestre) ";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestre", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Semestre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodDocente", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "CodDocente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestre", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Semestre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT * FROM FichaTutorias WHERE Semestre = @Semestre";
+            this._commandCollection[2].CommandText = "SELECT * FROM FichaTutorias WHERE (Semestre = @Semestre)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestre", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Semestre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"INSERT INTO FichaTutorias
-                         (Semestre, Fecha, Horario, Lugar, Actividad, CodDocente, CodEstudiante, Referencia, Descripción)
-VALUES        (@Semestre,@Fecha,@Horario,@Lugar,@Actividad,@CodDocente,@CodEstudiante,@Referencia,@Descripcion)";
+            this._commandCollection[3].CommandText = "SELECT DISTINCT * FROM FichaTutorias\r\nWHERE (CodDocente = @CodDocente) AND (Semes" +
+                "tre = @Semestre) ";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestre", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Semestre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horario", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Horario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Lugar", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "Lugar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Actividad", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Actividad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodDocente", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "CodDocente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodEstudiante", global::System.Data.SqlDbType.VarChar, 6, global::System.Data.ParameterDirection.Input, 0, 0, "CodEstudiante", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Referencia", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "Referencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Descripción", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestre", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Semestre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "INSERT INTO FichaTutorias\n (Semestre, Fecha, Horario, Lugar, Actividad, CodDocent" +
+                "e, CodEstudiante, Referencia, Descripción)\nVALUES        (@Semestre,@Fecha,@Hora" +
+                "rio,@Lugar,@Actividad,@CodDocente,@CodEstudiante,@Referencia,@Descripcion)";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestre", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Semestre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horario", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Horario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Lugar", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "Lugar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Actividad", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Actividad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodDocente", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "CodDocente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodEstudiante", global::System.Data.SqlDbType.VarChar, 6, global::System.Data.ParameterDirection.Input, 0, 0, "CodEstudiante", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Referencia", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "Referencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Descripción", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsTutorias.FichaTutoriasDataTable dataTable, string Semestre, string CodDocente) {
+        public virtual int Fill(dsTutorias.FichaTutoriasDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((Semestre == null)) {
-                throw new global::System.ArgumentNullException("Semestre");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Semestre));
-            }
-            if ((CodDocente == null)) {
-                throw new global::System.ArgumentNullException("CodDocente");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(CodDocente));
-            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -6417,20 +6712,8 @@ VALUES        (@Semestre,@Fecha,@Horario,@Lugar,@Actividad,@CodDocente,@CodEstud
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsTutorias.FichaTutoriasDataTable GetEstudiantesByCodDocente(string Semestre, string CodDocente) {
+        public virtual dsTutorias.FichaTutoriasDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((Semestre == null)) {
-                throw new global::System.ArgumentNullException("Semestre");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Semestre));
-            }
-            if ((CodDocente == null)) {
-                throw new global::System.ArgumentNullException("CodDocente");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(CodDocente));
-            }
             dsTutorias.FichaTutoriasDataTable dataTable = new dsTutorias.FichaTutoriasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -6440,19 +6723,19 @@ VALUES        (@Semestre,@Fecha,@Horario,@Lugar,@Actividad,@CodDocente,@CodEstud
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(dsTutorias.FichaTutoriasDataTable dataTable, string Semestre, string CodDocente) {
+        public virtual int FillBy(dsTutorias.FichaTutoriasDataTable dataTable, string CodDocente, string Semestre) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((Semestre == null)) {
-                throw new global::System.ArgumentNullException("Semestre");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Semestre));
-            }
             if ((CodDocente == null)) {
                 throw new global::System.ArgumentNullException("CodDocente");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(CodDocente));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(CodDocente));
+            }
+            if ((Semestre == null)) {
+                throw new global::System.ArgumentNullException("Semestre");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Semestre));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6465,19 +6748,19 @@ VALUES        (@Semestre,@Fecha,@Horario,@Lugar,@Actividad,@CodDocente,@CodEstud
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual dsTutorias.FichaTutoriasDataTable GetDataByDocente(string Semestre, string CodDocente) {
+        public virtual dsTutorias.FichaTutoriasDataTable GetEstudiantesByCodDocente(string CodDocente, string Semestre) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((Semestre == null)) {
-                throw new global::System.ArgumentNullException("Semestre");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Semestre));
-            }
             if ((CodDocente == null)) {
                 throw new global::System.ArgumentNullException("CodDocente");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(CodDocente));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(CodDocente));
+            }
+            if ((Semestre == null)) {
+                throw new global::System.ArgumentNullException("Semestre");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Semestre));
             }
             dsTutorias.FichaTutoriasDataTable dataTable = new dsTutorias.FichaTutoriasDataTable();
             this.Adapter.Fill(dataTable);
@@ -6523,9 +6806,57 @@ VALUES        (@Semestre,@Fecha,@Horario,@Lugar,@Actividad,@CodDocente,@CodEstud
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy2(dsTutorias.FichaTutoriasDataTable dataTable, string CodDocente, string Semestre) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((CodDocente == null)) {
+                throw new global::System.ArgumentNullException("CodDocente");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(CodDocente));
+            }
+            if ((Semestre == null)) {
+                throw new global::System.ArgumentNullException("Semestre");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Semestre));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual dsTutorias.FichaTutoriasDataTable GetDataByCodDocente(string CodDocente, string Semestre) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((CodDocente == null)) {
+                throw new global::System.ArgumentNullException("CodDocente");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(CodDocente));
+            }
+            if ((Semestre == null)) {
+                throw new global::System.ArgumentNullException("Semestre");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Semestre));
+            }
+            dsTutorias.FichaTutoriasDataTable dataTable = new dsTutorias.FichaTutoriasDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
         public virtual int Insertar(string Semestre, string Fecha, string Horario, string Lugar, string Actividad, string CodDocente, string CodEstudiante, string Referencia, string Descripcion) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
             if ((Semestre == null)) {
                 throw new global::System.ArgumentNullException("Semestre");
             }

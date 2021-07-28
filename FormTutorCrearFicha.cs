@@ -16,9 +16,12 @@ namespace WinFormsFix
         private FichaTutoriasTableAdapter taFichasTutorias = new FichaTutoriasTableAdapter();
         private dsTutorias.FichaTutoriasDataTable dtFichasTutorias = new dsTutorias.FichaTutoriasDataTable();
 
+        string CodDocente;
+
         public FormTutorCrearFicha(string CodDocente, string NombresyApellidos)
         {
             InitializeComponent();
+            this.CodDocente = CodDocente;
             labelNombresTutor.Text = NombresyApellidos;
         }
 
@@ -29,7 +32,7 @@ namespace WinFormsFix
                                         textBoxHorario.Text,
                                         textBoxLugar.Text,
                                         textBoxActividad.Text,
-                                        textBoxCodEstudiante.Text,
+                                        CodDocente,
                                         textBoxCodEstudiante.Text,
                                         textBoxReferencia.Text,
                                         textBoxDescripción.Text);
