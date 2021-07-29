@@ -31,6 +31,7 @@ namespace WinFormsFix
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.BtnLogin = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBoxContraseña = new System.Windows.Forms.TextBox();
@@ -41,23 +42,25 @@ namespace WinFormsFix
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panelDDleft = new System.Windows.Forms.Panel();
+            this.panelDDright = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClose)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelDDright.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel1.Controls.Add(this.panelDDright);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.BtnLogin);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.textBoxContraseña);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.textBoxUsuario);
-            this.panel1.Controls.Add(this.pictureBoxClose);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(287, 0);
@@ -65,6 +68,19 @@ namespace WinFormsFix
             this.panel1.Size = new System.Drawing.Size(592, 431);
             this.panel1.TabIndex = 16;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.textBox1.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.textBox1.Location = new System.Drawing.Point(267, 160);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(249, 37);
+            this.textBox1.TabIndex = 22;
+            this.textBox1.Text = "@unsaac.edu.pe";
             // 
             // BtnLogin
             // 
@@ -158,6 +174,7 @@ namespace WinFormsFix
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Maroon;
+            this.panel2.Controls.Add(this.panelDDleft);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -190,18 +207,22 @@ namespace WinFormsFix
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // panelDDleft
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.textBox1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.textBox1.Location = new System.Drawing.Point(267, 160);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(249, 37);
-            this.textBox1.TabIndex = 22;
-            this.textBox1.Text = "@unsaac.edu.pe";
+            this.panelDDleft.Location = new System.Drawing.Point(0, 0);
+            this.panelDDleft.Name = "panelDDleft";
+            this.panelDDleft.Size = new System.Drawing.Size(287, 51);
+            this.panelDDleft.TabIndex = 7;
+            this.panelDDleft.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelDDleft_MouseDown);
+            // 
+            // panelDDright
+            // 
+            this.panelDDright.Controls.Add(this.pictureBoxClose);
+            this.panelDDright.Location = new System.Drawing.Point(0, 0);
+            this.panelDDright.Name = "panelDDright";
+            this.panelDDright.Size = new System.Drawing.Size(592, 51);
+            this.panelDDright.TabIndex = 23;
+            this.panelDDright.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelDDright_MouseDown);
             // 
             // FormLogin
             // 
@@ -219,6 +240,7 @@ namespace WinFormsFix
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelDDright.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -237,6 +259,8 @@ namespace WinFormsFix
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panelDDright;
+        private System.Windows.Forms.Panel panelDDleft;
     }
 }
 
