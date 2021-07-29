@@ -62,7 +62,7 @@ namespace WinFormsFix
                             txtEmailEstudiante.Text.Trim(),
                             txtDireccionEstudiante.Text.Trim().ToUpper(),
                             txtCelularEstudiante.Text.Trim(),
-                            null);
+                            "NO CONSIGNA");
                 labelMensaje.ForeColor = Color.Black;
                 labelMensaje.Text = "Se agregó un nuevo registro";
 

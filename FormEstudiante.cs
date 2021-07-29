@@ -57,7 +57,7 @@ namespace WinFormsFix
 
         private void labelNombresB_Click(object sender, EventArgs e)
         {
-            activeForm.Close();
+            if (activeForm != null) activeForm.Close();
             FillPersonalData(labelCodigoEstudiante.Text);
             groupBoxDatosPersonales.BringToFront();
             groupBoxDatosPersonales.Show();
