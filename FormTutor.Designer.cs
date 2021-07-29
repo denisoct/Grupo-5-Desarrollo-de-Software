@@ -32,7 +32,7 @@ namespace WinFormsFix
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTutor));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonVerTutorias = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelNombresB = new System.Windows.Forms.Label();
             this.buttonListaEstudiantes = new System.Windows.Forms.Button();
             this.buttonActualizarDatos = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -70,7 +70,7 @@ namespace WinFormsFix
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.groupBox1.Controls.Add(this.buttonVerTutorias);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.labelNombresB);
             this.groupBox1.Controls.Add(this.buttonListaEstudiantes);
             this.groupBox1.Controls.Add(this.buttonActualizarDatos);
             this.groupBox1.Controls.Add(this.button1);
@@ -95,17 +95,18 @@ namespace WinFormsFix
             this.buttonVerTutorias.UseVisualStyleBackColor = true;
             this.buttonVerTutorias.Click += new System.EventHandler(this.buttonVerTutorias_Click_1);
             // 
-            // label1
+            // labelNombresB
             // 
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 167);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(260, 23);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "LISETH URPY SEGUNDO CARPIO";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.labelNombresB.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelNombresB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelNombresB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombresB.Location = new System.Drawing.Point(0, 167);
+            this.labelNombresB.Name = "labelNombresB";
+            this.labelNombresB.Size = new System.Drawing.Size(260, 23);
+            this.labelNombresB.TabIndex = 20;
+            this.labelNombresB.Text = "LISETH URPY SEGUNDO CARPIO";
+            this.labelNombresB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNombresB.Click += new System.EventHandler(this.label1_Click);
             // 
             // buttonListaEstudiantes
             // 
@@ -425,7 +426,7 @@ namespace WinFormsFix
         private System.Windows.Forms.Button buttonCrearFichaTutoria;
         private System.Windows.Forms.Button buttonBuscarEstudiante;
         private System.Windows.Forms.Panel panelChildForm;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelNombresB;
         private System.Windows.Forms.Button buttonVerTutorias;
         private System.Windows.Forms.GroupBox groupBoxDatosPersonales;
         private System.Windows.Forms.Label labelCelularDocente;

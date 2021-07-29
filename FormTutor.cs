@@ -27,6 +27,7 @@ namespace WinFormsFix
             dsTutoriasTableAdapters.DocenteTableAdapter ta = new dsTutoriasTableAdapters.DocenteTableAdapter();
             dsTutorias.DocenteDataTable dt = ta.GetDataByCodDocente(CodDocente);
             dsTutorias.DocenteRow row = (dsTutorias.DocenteRow)dt[0];
+            labelNombresB.Text = row.Nombres;
             labelCodigoDocente.Text = row.CodDocente;
             labelNombresDocente.Text = row.Nombres;
             labelApellidosDocente.Text = row.Apellidos;

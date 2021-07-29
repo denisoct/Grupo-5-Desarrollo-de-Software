@@ -189,6 +189,21 @@ namespace WinFormsFix
                             txtDireccionDocente.Text.Trim().ToUpper(), 
                             txtCelularDocente.Text.Trim());
                 labelMensaje.Text = "Se agregó un nuevo registro.";
+
+                // Si es tutor, crear un usuario para el docente
+                dt = ta.GetTutoresByCodEP("IN");
+
+                // Recorrer el data table
+                foreach (dsTutorias.DocenteRow rowDocente in dt)
+                {
+                    if (rowDocente.CodDocente == txtCodigoDocente.Text)
+                    {
+                        dsTutoriasTableAdapters.UsuariosTableAdapter taUsuarios = new dsTutoriasTableAdapters.UsuariosTableAdapter();
+
+                        string Usuario = txtCodigoDocente.Text + "@unsaac.edu.pe";
+                        taUsuarios.Insertar(Usuario, txtCodigoDocente.Text, "TUTOR");
+                    }
+                }
             }
         }
 
@@ -237,6 +252,10 @@ namespace WinFormsFix
             {
                 ta.Eliminar(txtCodigoDocente.Text);
                 labelMensaje.Text = "Se eliminó el registro.";
+
+                // Eliminar usuario también
+                dsTutoriasTableAdapters.UsuariosTableAdapter taUsuarios = new dsTutoriasTableAdapters.UsuariosTableAdapter();
+                taUsuarios.Eliminar(txtCodigoDocente.Text + "@unsaac.edu.pe");
             }
         }
 
