@@ -65,6 +65,11 @@ namespace WinFormsFix
                             null);
                 labelMensaje.ForeColor = Color.Black;
                 labelMensaje.Text = "Se agregó un nuevo registro";
+
+                // Crear usuario
+                string Usuario = txtCodEstudiante.Text + "@unsaac.edu.pe";
+                dsTutoriasTableAdapters.UsuariosTableAdapter taUsuario = new dsTutoriasTableAdapters.UsuariosTableAdapter();
+                taUsuario.Insertar(Usuario, txtCodEstudiante.Text, "ESTUDIANTE");
             }
         }
 
@@ -106,6 +111,10 @@ namespace WinFormsFix
             {
                 ta.Eliminar(txtCodEstudiante.Text);
                 labelMensaje.Text = "Se eliminó el registro";
+
+                // Eliminar Usuario también
+                dsTutoriasTableAdapters.UsuariosTableAdapter taUsuarios = new dsTutoriasTableAdapters.UsuariosTableAdapter();
+                taUsuarios.Eliminar(txtCodEstudiante.Text + "@unsaac.edu.pe");
             }
         }
     }
