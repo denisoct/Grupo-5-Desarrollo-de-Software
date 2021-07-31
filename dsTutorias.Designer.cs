@@ -3983,9 +3983,9 @@ SELECT CodDocente, Nombres, Apellidos, CodEP, TipoContrato, Categoria, Regimen, 
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
             this._commandCollection[4].CommandText = "INSERT INTO Docente(CodDocente, Nombres, Apellidos, CodEP, TipoContrato, Categori" +
-                "a, Regimen, Tipo, Email, Dirección, Celular)\r\nvalues (@CodDocente, @Nombres, @Ap" +
-                "ellidos, @CodEP, @TipoContrato, @Categoria, @Regimen, @Tipo, @Email, @Direccion," +
-                " @Celular)";
+                "a, Regimen, Tipo, Email, Dirección, Celular)\nvalues (@CodDocente, @Nombres, @Ape" +
+                "llidos, @CodEP, @TipoContrato, @Categoria, @Regimen, @Tipo, @Email, @Direccion, " +
+                "@Celular)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodDocente", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "CodDocente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombres", global::System.Data.SqlDbType.VarChar, 45, global::System.Data.ParameterDirection.Input, 0, 0, "Nombres", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4890,8 +4890,8 @@ WHERE CodDocente = @CodDocente";
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [Tutor] ([CodDocente], [Semestre], [CodEstudiante]) VALUES (@CodDocen" +
-                "te, @Semestre, @CodEstudiante);\r\nSELECT IdTutor, CodDocente, Semestre, CodEstudi" +
-                "ante FROM Tutor WHERE (IdTutor = SCOPE_IDENTITY())";
+                "te, @Semestre, @CodEstudiante);\nSELECT IdTutor, CodDocente, Semestre, CodEstudia" +
+                "nte FROM Tutor WHERE (IdTutor = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodDocente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodDocente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Semestre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4928,16 +4928,16 @@ SELECT IdTutor, CodDocente, Semestre, CodEstudiante FROM Tutor WHERE (IdTutor = 
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "DELETE FROM Tutor\r\nWHERE CodEstudiante = @CodEstudiante AND CodDocente = @CodDoce" +
-                "nte AND Semestre = @Semestre";
+            this._commandCollection[1].CommandText = "DELETE FROM Tutor\nWHERE CodEstudiante = @CodEstudiante AND CodDocente = @CodDocen" +
+                "te AND Semestre = @Semestre";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodEstudiante", global::System.Data.SqlDbType.VarChar, 6, global::System.Data.ParameterDirection.Input, 0, 0, "CodEstudiante", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodDocente", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "CodDocente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestre", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Semestre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT * FROM Tutor \r\n WHERE (CodDocente = @CodDocente) AND (Semestre = @Semestre" +
-                ")";
+            this._commandCollection[2].CommandText = "SELECT * FROM Tutor \n WHERE (CodDocente = @CodDocente) AND (Semestre = @Semestre)" +
+                "";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodDocente", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "CodDocente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestre", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Semestre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4948,8 +4948,8 @@ SELECT IdTutor, CodDocente, Semestre, CodEstudiante FROM Tutor WHERE (IdTutor = 
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodDocente", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "CodDocente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "INSERT INTO Tutor(CodDocente, Semestre, CodEstudiante)\r\nVALUES (@CodDocente, @Sem" +
-                "estre, @CodEstudiante)";
+            this._commandCollection[4].CommandText = "INSERT INTO Tutor(CodDocente, Semestre, CodEstudiante)\nVALUES (@CodDocente, @Seme" +
+                "stre, @CodEstudiante)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodDocente", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "CodDocente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestre", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Semestre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5535,8 +5535,8 @@ SELECT CodEstudiante, Nombres, Apellidos, CodEP, Email, Dirección, Celular, Inf
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "INSERT INTO Estudiante(CodEstudiante, Nombres, Apellidos, CodEP, Email, Dirección" +
-                ", Celular, InformaciónPersonal)\r\nVALUES (@CodEstudiante, @Nombres, @Apellidos, @" +
-                "CodEP, @Email, @Dirección, @Celular, @InformaciónPersonal)";
+                ", Celular, InformaciónPersonal)\nVALUES (@CodEstudiante, @Nombres, @Apellidos, @C" +
+                "odEP, @Email, @Dirección, @Celular, @InformaciónPersonal)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodEstudiante", global::System.Data.SqlDbType.VarChar, 6, global::System.Data.ParameterDirection.Input, 0, 0, "CodEstudiante", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombres", global::System.Data.SqlDbType.VarChar, 45, global::System.Data.ParameterDirection.Input, 0, 0, "Nombres", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5550,7 +5550,7 @@ SELECT CodEstudiante, Nombres, Apellidos, CodEP, Email, Dirección, Celular, Inf
             this._commandCollection[4].Connection = this.Connection;
             this._commandCollection[4].CommandText = "UPDATE Estudiante SET Nombres = @Nombres, Apellidos = @Apellidos, CodEP = @CodEP," +
                 " Email = @Email, Dirección = @Dirección, Celular = @Celular, InformaciónPersonal" +
-                " = @InformaciónPersonal\r\nWHERE CodEstudiante = @CodEstudiante";
+                " = @InformaciónPersonal\nWHERE CodEstudiante = @CodEstudiante";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombres", global::System.Data.SqlDbType.VarChar, 45, global::System.Data.ParameterDirection.Input, 0, 0, "Nombres", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Apellidos", global::System.Data.SqlDbType.VarChar, 45, global::System.Data.ParameterDirection.Input, 0, 0, "Apellidos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6254,9 +6254,9 @@ SELECT CodEstudiante, Nombres, Apellidos, CodEP, Email, Dirección, Celular, Inf
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT E.CodEstudiante, E.Nombres, E.Apellidos\r\nFROM Estudiante E, RiesgoAcademic" +
-                "o RA\r\nWHERE (E.CodEstudiante = RA.CodEstudiante) AND (RA.EstaRiesgo = \'SI\') AND " +
-                "(E.CodEP = @CodEP)";
+            this._commandCollection[0].CommandText = "SELECT E.CodEstudiante, E.Nombres, E.Apellidos\nFROM Estudiante E, RiesgoAcademico" +
+                " RA\nWHERE (E.CodEstudiante = RA.CodEstudiante) AND (RA.EstaRiesgo = \'SI\') AND (E" +
+                ".CodEP = @CodEP)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodEP", global::System.Data.SqlDbType.VarChar, 8, global::System.Data.ParameterDirection.Input, 0, 0, "CodEP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -6443,7 +6443,7 @@ SELECT CodEstudiante, Nombres, Apellidos, CodEP, Email, Dirección, Celular, Inf
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "DELETE FROM Usuarios where IdUsuario = @IdUsuario";
+            this._commandCollection[1].CommandText = "DELETE FROM Usuarios WHERE IdUsuario = @IdUsuario";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdUsuario", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "IdUsuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
@@ -6453,8 +6453,8 @@ SELECT CodEstudiante, Nombres, Apellidos, CodEP, Email, Dirección, Celular, Inf
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdUsuario", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "IdUsuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "INSERT INTO Usuarios\r\n                         (IdUsuario, Contraseña, Tipo)\r\nVAL" +
-                "UES        (@IdUsuario,@Contraseña,@Tipo)";
+            this._commandCollection[3].CommandText = "INSERT INTO Usuarios (IdUsuario, Contraseña, Tipo) \nVALUES (@IdUsuario,@Contraseñ" +
+                "a,@Tipo)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdUsuario", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "IdUsuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Contraseña", global::System.Data.SqlDbType.VarChar, 45, global::System.Data.ParameterDirection.Input, 0, 0, "Contraseña", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6736,16 +6736,16 @@ SELECT CodEstudiante, Nombres, Apellidos, CodEP, Email, Dirección, Celular, Inf
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[6];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT * FROM FichaTutorias ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT DISTINCT E.CodEstudiante, E.Nombres, E.Apellidos \r\nFROM FichaTutorias FT, " +
-                "Estudiante E \r\nWHERE (E.CodEstudiante = FT.CodEstudiante) AND (FT.CodDocente = @" +
-                "CodDocente) AND (FT.Semestre = @Semestre) ";
+            this._commandCollection[1].CommandText = "SELECT DISTINCT E.CodEstudiante, E.Nombres, E.Apellidos \nFROM FichaTutorias FT, E" +
+                "studiante E \nWHERE (E.CodEstudiante = FT.CodEstudiante) AND (FT.CodDocente = @Co" +
+                "dDocente) AND (FT.Semestre = @Semestre) ";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodDocente", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "CodDocente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestre", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Semestre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6763,19 +6763,27 @@ SELECT CodEstudiante, Nombres, Apellidos, CodEP, Email, Dirección, Celular, Inf
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestre", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Semestre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "INSERT INTO FichaTutorias\r\n (Semestre, Fecha, Horario, Lugar, Actividad, CodDocen" +
-                "te, CodEstudiante, Referencia, Descripción)\r\nVALUES        (@Semestre,@Fecha,@Ho" +
-                "rario,@Lugar,@Actividad,@CodDocente,@CodEstudiante,@Referencia,@Descripcion)";
+            this._commandCollection[4].CommandText = "SELECT DISTINCT * FROM FichaTutorias\r\nWHERE (CodDocente = @CodDocente) AND (Semes" +
+                "tre = @Semestre) AND (CodEstudiante = @CodEstudiante) ";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestre", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Semestre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horario", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Horario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Lugar", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "Lugar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Actividad", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Actividad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodDocente", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "CodDocente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestre", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Semestre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodEstudiante", global::System.Data.SqlDbType.VarChar, 6, global::System.Data.ParameterDirection.Input, 0, 0, "CodEstudiante", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Referencia", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "Referencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Descripción", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "INSERT INTO FichaTutorias\n (Semestre, Fecha, Horario, Lugar, Actividad, CodDocent" +
+                "e, CodEstudiante, Referencia, Descripción)\nVALUES        (@Semestre,@Fecha,@Hora" +
+                "rio,@Lugar,@Actividad,@CodDocente,@CodEstudiante,@Referencia,@Descripcion)";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Semestre", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Semestre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Horario", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Horario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Lugar", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "Lugar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Actividad", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Actividad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodDocente", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "CodDocente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodEstudiante", global::System.Data.SqlDbType.VarChar, 6, global::System.Data.ParameterDirection.Input, 0, 0, "CodEstudiante", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Referencia", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "Referencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descripcion", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Descripción", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6937,9 +6945,69 @@ SELECT CodEstudiante, Nombres, Apellidos, CodEP, Email, Dirección, Celular, Inf
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy3(dsTutorias.FichaTutoriasDataTable dataTable, string CodDocente, string Semestre, string CodEstudiante) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((CodDocente == null)) {
+                throw new global::System.ArgumentNullException("CodDocente");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(CodDocente));
+            }
+            if ((Semestre == null)) {
+                throw new global::System.ArgumentNullException("Semestre");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Semestre));
+            }
+            if ((CodEstudiante == null)) {
+                throw new global::System.ArgumentNullException("CodEstudiante");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(CodEstudiante));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual dsTutorias.FichaTutoriasDataTable GetFichaEstudiante(string CodDocente, string Semestre, string CodEstudiante) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((CodDocente == null)) {
+                throw new global::System.ArgumentNullException("CodDocente");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(CodDocente));
+            }
+            if ((Semestre == null)) {
+                throw new global::System.ArgumentNullException("Semestre");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Semestre));
+            }
+            if ((CodEstudiante == null)) {
+                throw new global::System.ArgumentNullException("CodEstudiante");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(CodEstudiante));
+            }
+            dsTutorias.FichaTutoriasDataTable dataTable = new dsTutorias.FichaTutoriasDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
         public virtual int Insertar(string Semestre, string Fecha, string Horario, string Lugar, string Actividad, string CodDocente, string CodEstudiante, string Referencia, string Descripcion) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[5];
             if ((Semestre == null)) {
                 throw new global::System.ArgumentNullException("Semestre");
             }
