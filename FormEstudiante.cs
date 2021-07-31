@@ -12,9 +12,12 @@ namespace WinFormsFix
 {
     public partial class FormEstudiante : Form
     {
+        string CodEstudiante;
+
         public FormEstudiante(string CodEstudiante)
         {
             InitializeComponent();
+            this.CodEstudiante = CodEstudiante;           
             FillPersonalData(CodEstudiante);
         }
 
@@ -23,12 +26,10 @@ namespace WinFormsFix
             dsTutoriasTableAdapters.EstudianteTableAdapter ta = new dsTutoriasTableAdapters.EstudianteTableAdapter();
             dsTutorias.EstudianteDataTable dt = ta.GetDataByCodEstudiante(CodEstudiante);
             dsTutorias.EstudianteRow row = (dsTutorias.EstudianteRow)dt[0];
-            labelNombresB.Text = row.Nombres;
             labelCodigoEstudiante.Text = row.CodEstudiante;
             labelNombresEstudiante.Text = row.Nombres;
             labelApellidosEstudiante.Text = row.Apellidos;
-            if (row.CodEP == "IN")
-                labelEPEstudiante.Text = "INGENIERIA INFORMATICA Y DE SISTEMAS";
+            labelEPEstudiante.Text = "INGENIERIA INFORMATICA Y DE SISTEMAS";
             labelEmailEstudiante.Text = row.Email;
             labelDireccionEstudiante.Text = row.Dirección;
             labelCelular.Text = row.Celular;
@@ -52,12 +53,12 @@ namespace WinFormsFix
 
         private void buttonActualizarDatos_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormEstudianteActualizarDatos(labelCodigoEstudiante.Text));
+            openChildForm(new FormEstudianteActualizarDatos(CodEstudiante));
         }
 
         private void labelNombresB_Click(object sender, EventArgs e)
         {
-            if (activeForm != null) activeForm.Close();
+            activeForm.Close();
             FillPersonalData(labelCodigoEstudiante.Text);
             groupBoxDatosPersonales.BringToFront();
             groupBoxDatosPersonales.Show();

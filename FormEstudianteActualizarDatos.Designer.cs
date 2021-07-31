@@ -32,18 +32,18 @@ namespace WinFormsFix
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.labellMensaje = new System.Windows.Forms.Label();
+            this.labelMensaje = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonActualizarInfo = new System.Windows.Forms.Button();
             this.textBoxInformacionPersonal = new System.Windows.Forms.TextBox();
             this.textBoxCelularEstudiante = new System.Windows.Forms.TextBox();
             this.textBoxDireccionEstudiante = new System.Windows.Forms.TextBox();
             this.textBoxEmailEstudiante = new System.Windows.Forms.TextBox();
-            this.labelCodigo = new System.Windows.Forms.Label();
+            this.labelCodigoEstudiante = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.labelEP = new System.Windows.Forms.Label();
-            this.labelApellidos = new System.Windows.Forms.Label();
-            this.labelNombres = new System.Windows.Forms.Label();
+            this.labelEPEstudiante = new System.Windows.Forms.Label();
+            this.labelApellidosEstudiante = new System.Windows.Forms.Label();
+            this.labelNombresEstudiante = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -80,7 +80,7 @@ namespace WinFormsFix
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.labellMensaje);
+            this.groupBox6.Controls.Add(this.labelMensaje);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox6.Location = new System.Drawing.Point(0, 414);
             this.groupBox6.Name = "groupBox6";
@@ -89,15 +89,15 @@ namespace WinFormsFix
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Mensaje:";
             // 
-            // labellMensaje
+            // labelMensaje
             // 
-            this.labellMensaje.AutoSize = true;
-            this.labellMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labellMensaje.Location = new System.Drawing.Point(7, 20);
-            this.labellMensaje.Name = "labellMensaje";
-            this.labellMensaje.Size = new System.Drawing.Size(116, 15);
-            this.labellMensaje.TabIndex = 0;
-            this.labellMensaje.Text = "Se agrego con éxito";
+            this.labelMensaje.AutoSize = true;
+            this.labelMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMensaje.Location = new System.Drawing.Point(7, 20);
+            this.labelMensaje.Name = "labelMensaje";
+            this.labelMensaje.Size = new System.Drawing.Size(116, 15);
+            this.labelMensaje.TabIndex = 0;
+            this.labelMensaje.Text = "Se agrego con éxito";
             // 
             // panel1
             // 
@@ -106,11 +106,11 @@ namespace WinFormsFix
             this.panel1.Controls.Add(this.textBoxCelularEstudiante);
             this.panel1.Controls.Add(this.textBoxDireccionEstudiante);
             this.panel1.Controls.Add(this.textBoxEmailEstudiante);
-            this.panel1.Controls.Add(this.labelCodigo);
+            this.panel1.Controls.Add(this.labelCodigoEstudiante);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.labelEP);
-            this.panel1.Controls.Add(this.labelApellidos);
-            this.panel1.Controls.Add(this.labelNombres);
+            this.panel1.Controls.Add(this.labelEPEstudiante);
+            this.panel1.Controls.Add(this.labelApellidosEstudiante);
+            this.panel1.Controls.Add(this.labelNombresEstudiante);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label18);
@@ -169,15 +169,15 @@ namespace WinFormsFix
             this.textBoxEmailEstudiante.Size = new System.Drawing.Size(280, 22);
             this.textBoxEmailEstudiante.TabIndex = 70;
             // 
-            // labelCodigo
+            // labelCodigoEstudiante
             // 
-            this.labelCodigo.AutoSize = true;
-            this.labelCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCodigo.Location = new System.Drawing.Point(229, 39);
-            this.labelCodigo.Name = "labelCodigo";
-            this.labelCodigo.Size = new System.Drawing.Size(52, 16);
-            this.labelCodigo.TabIndex = 69;
-            this.labelCodigo.Text = "Código";
+            this.labelCodigoEstudiante.AutoSize = true;
+            this.labelCodigoEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCodigoEstudiante.Location = new System.Drawing.Point(229, 39);
+            this.labelCodigoEstudiante.Name = "labelCodigoEstudiante";
+            this.labelCodigoEstudiante.Size = new System.Drawing.Size(52, 16);
+            this.labelCodigoEstudiante.TabIndex = 69;
+            this.labelCodigoEstudiante.Text = "Código";
             // 
             // label5
             // 
@@ -189,35 +189,35 @@ namespace WinFormsFix
             this.label5.TabIndex = 68;
             this.label5.Text = "Código:";
             // 
-            // labelEP
+            // labelEPEstudiante
             // 
-            this.labelEP.AutoSize = true;
-            this.labelEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEP.Location = new System.Drawing.Point(228, 135);
-            this.labelEP.Name = "labelEP";
-            this.labelEP.Size = new System.Drawing.Size(128, 16);
-            this.labelEP.TabIndex = 67;
-            this.labelEP.Text = "Escuela Profesional";
+            this.labelEPEstudiante.AutoSize = true;
+            this.labelEPEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEPEstudiante.Location = new System.Drawing.Point(228, 135);
+            this.labelEPEstudiante.Name = "labelEPEstudiante";
+            this.labelEPEstudiante.Size = new System.Drawing.Size(128, 16);
+            this.labelEPEstudiante.TabIndex = 67;
+            this.labelEPEstudiante.Text = "Escuela Profesional";
             // 
-            // labelApellidos
+            // labelApellidosEstudiante
             // 
-            this.labelApellidos.AutoSize = true;
-            this.labelApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelApellidos.Location = new System.Drawing.Point(228, 103);
-            this.labelApellidos.Name = "labelApellidos";
-            this.labelApellidos.Size = new System.Drawing.Size(65, 16);
-            this.labelApellidos.TabIndex = 66;
-            this.labelApellidos.Text = "Apellidos";
+            this.labelApellidosEstudiante.AutoSize = true;
+            this.labelApellidosEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelApellidosEstudiante.Location = new System.Drawing.Point(228, 103);
+            this.labelApellidosEstudiante.Name = "labelApellidosEstudiante";
+            this.labelApellidosEstudiante.Size = new System.Drawing.Size(65, 16);
+            this.labelApellidosEstudiante.TabIndex = 66;
+            this.labelApellidosEstudiante.Text = "Apellidos";
             // 
-            // labelNombres
+            // labelNombresEstudiante
             // 
-            this.labelNombres.AutoSize = true;
-            this.labelNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombres.Location = new System.Drawing.Point(228, 71);
-            this.labelNombres.Name = "labelNombres";
-            this.labelNombres.Size = new System.Drawing.Size(64, 16);
-            this.labelNombres.TabIndex = 65;
-            this.labelNombres.Text = "Nombres";
+            this.labelNombresEstudiante.AutoSize = true;
+            this.labelNombresEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombresEstudiante.Location = new System.Drawing.Point(228, 71);
+            this.labelNombresEstudiante.Name = "labelNombresEstudiante";
+            this.labelNombresEstudiante.Size = new System.Drawing.Size(64, 16);
+            this.labelNombresEstudiante.TabIndex = 65;
+            this.labelNombresEstudiante.Text = "Nombres";
             // 
             // label16
             // 
@@ -337,18 +337,18 @@ namespace WinFormsFix
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label labellMensaje;
+        private System.Windows.Forms.Label labelMensaje;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonActualizarInfo;
         private System.Windows.Forms.TextBox textBoxInformacionPersonal;
         private System.Windows.Forms.TextBox textBoxCelularEstudiante;
         private System.Windows.Forms.TextBox textBoxDireccionEstudiante;
         private System.Windows.Forms.TextBox textBoxEmailEstudiante;
-        private System.Windows.Forms.Label labelCodigo;
+        private System.Windows.Forms.Label labelCodigoEstudiante;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label labelEP;
-        private System.Windows.Forms.Label labelApellidos;
-        private System.Windows.Forms.Label labelNombres;
+        private System.Windows.Forms.Label labelEPEstudiante;
+        private System.Windows.Forms.Label labelApellidosEstudiante;
+        private System.Windows.Forms.Label labelNombresEstudiante;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;

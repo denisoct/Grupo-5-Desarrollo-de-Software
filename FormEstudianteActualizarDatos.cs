@@ -13,12 +13,14 @@ namespace WinFormsFix
 {
     public partial class FormEstudianteActualizarDatos : Form
     {
+        // TableAdapter Estudiante:
         private EstudianteTableAdapter taEstudiante = new EstudianteTableAdapter();
         private dsTutorias.EstudianteDataTable dtEstudiante = new dsTutorias.EstudianteDataTable();
 
         public FormEstudianteActualizarDatos(string CodEstudiante)
         {
             InitializeComponent();
+            labelMensaje.Text = "";
             FillPersonalData(CodEstudiante);
         }
 
@@ -26,11 +28,11 @@ namespace WinFormsFix
         {
             dtEstudiante = taEstudiante.GetDataByCodEstudiante(CodEstudiante);
             dsTutorias.EstudianteRow rowEstudiante = (dsTutorias.EstudianteRow)dtEstudiante[0];
-            labelCodigo.Text = rowEstudiante.CodEstudiante;
-            labelNombres.Text = rowEstudiante.Nombres;
-            labelApellidos.Text = rowEstudiante.Apellidos;
-            labelApellidos.Text = rowEstudiante.Apellidos;
-            labelEP.Text = "INGENIERÍA INFORMÁTICA Y DE SISTEMAS";
+            labelCodigoEstudiante.Text = rowEstudiante.CodEstudiante;
+            labelNombresEstudiante.Text = rowEstudiante.Nombres;
+            labelApellidosEstudiante.Text = rowEstudiante.Apellidos;
+            labelApellidosEstudiante.Text = rowEstudiante.Apellidos;
+            labelEPEstudiante.Text = "INGENIERÍA INFORMÁTICA Y DE SISTEMAS";
             textBoxEmailEstudiante.Text = rowEstudiante.Email;
             textBoxDireccionEstudiante.Text = rowEstudiante.Dirección;
             textBoxCelularEstudiante.Text = rowEstudiante.Celular;
@@ -39,19 +41,19 @@ namespace WinFormsFix
 
         private void buttonActualizarInfo_Click(object sender, EventArgs e)
         {
-            dtEstudiante = taEstudiante.GetDataByCodEstudiante(labelCodigo.Text);
+            dtEstudiante = taEstudiante.GetDataByCodEstudiante(labelCodigoEstudiante.Text);
             dsTutorias.EstudianteRow rowEstudiante = (dsTutorias.EstudianteRow)dtEstudiante[0];
 
-            taEstudiante.Modificar(labelNombres.Text,
-                                   labelApellidos.Text,
+            taEstudiante.Modificar(labelNombresEstudiante.Text,
+                                   labelApellidosEstudiante.Text,
                                    "IN",
                                    textBoxEmailEstudiante.Text,
                                    textBoxDireccionEstudiante.Text,
                                    textBoxCelularEstudiante.Text,
                                    textBoxInformacionPersonal.Text,
-                                   labelCodigo.Text);
+                                   labelCodigoEstudiante.Text);
 
-            labellMensaje.Text = "Se modificó con éxito";
+            labelMensaje.Text = "Se modificó el registro";
         }
     }
 }
