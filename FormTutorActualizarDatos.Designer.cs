@@ -35,11 +35,11 @@ namespace WinFormsFix
             this.labelMensaje = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelCatRegTipo = new System.Windows.Forms.Label();
-            this.labelTipoContrato = new System.Windows.Forms.Label();
-            this.labelEscuelaProfesiona = new System.Windows.Forms.Label();
-            this.labelApellidosTutor = new System.Windows.Forms.Label();
-            this.labelNombresTutor = new System.Windows.Forms.Label();
-            this.labelCodigoTutor = new System.Windows.Forms.Label();
+            this.labelTipoContratoDocente = new System.Windows.Forms.Label();
+            this.labelEPDocente = new System.Windows.Forms.Label();
+            this.labelApellidosDocente = new System.Windows.Forms.Label();
+            this.labelNombresDocente = new System.Windows.Forms.Label();
+            this.labelCodigoDocente = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -104,11 +104,11 @@ namespace WinFormsFix
             // panel1
             // 
             this.panel1.Controls.Add(this.labelCatRegTipo);
-            this.panel1.Controls.Add(this.labelTipoContrato);
-            this.panel1.Controls.Add(this.labelEscuelaProfesiona);
-            this.panel1.Controls.Add(this.labelApellidosTutor);
-            this.panel1.Controls.Add(this.labelNombresTutor);
-            this.panel1.Controls.Add(this.labelCodigoTutor);
+            this.panel1.Controls.Add(this.labelTipoContratoDocente);
+            this.panel1.Controls.Add(this.labelEPDocente);
+            this.panel1.Controls.Add(this.labelApellidosDocente);
+            this.panel1.Controls.Add(this.labelNombresDocente);
+            this.panel1.Controls.Add(this.labelCodigoDocente);
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.label20);
@@ -138,55 +138,55 @@ namespace WinFormsFix
             this.labelCatRegTipo.TabIndex = 66;
             this.labelCatRegTipo.Text = "Categoria - Regimen";
             // 
-            // labelTipoContrato
+            // labelTipoContratoDocente
             // 
-            this.labelTipoContrato.AutoSize = true;
-            this.labelTipoContrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTipoContrato.Location = new System.Drawing.Point(223, 144);
-            this.labelTipoContrato.Name = "labelTipoContrato";
-            this.labelTipoContrato.Size = new System.Drawing.Size(89, 16);
-            this.labelTipoContrato.TabIndex = 65;
-            this.labelTipoContrato.Text = "Tipo Contrato";
+            this.labelTipoContratoDocente.AutoSize = true;
+            this.labelTipoContratoDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTipoContratoDocente.Location = new System.Drawing.Point(223, 144);
+            this.labelTipoContratoDocente.Name = "labelTipoContratoDocente";
+            this.labelTipoContratoDocente.Size = new System.Drawing.Size(89, 16);
+            this.labelTipoContratoDocente.TabIndex = 65;
+            this.labelTipoContratoDocente.Text = "Tipo Contrato";
             // 
-            // labelEscuelaProfesiona
+            // labelEPDocente
             // 
-            this.labelEscuelaProfesiona.AutoSize = true;
-            this.labelEscuelaProfesiona.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEscuelaProfesiona.Location = new System.Drawing.Point(223, 112);
-            this.labelEscuelaProfesiona.Name = "labelEscuelaProfesiona";
-            this.labelEscuelaProfesiona.Size = new System.Drawing.Size(128, 16);
-            this.labelEscuelaProfesiona.TabIndex = 64;
-            this.labelEscuelaProfesiona.Text = "Escuela Profesional";
+            this.labelEPDocente.AutoSize = true;
+            this.labelEPDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEPDocente.Location = new System.Drawing.Point(223, 112);
+            this.labelEPDocente.Name = "labelEPDocente";
+            this.labelEPDocente.Size = new System.Drawing.Size(128, 16);
+            this.labelEPDocente.TabIndex = 64;
+            this.labelEPDocente.Text = "Escuela Profesional";
             // 
-            // labelApellidosTutor
+            // labelApellidosDocente
             // 
-            this.labelApellidosTutor.AutoSize = true;
-            this.labelApellidosTutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelApellidosTutor.Location = new System.Drawing.Point(223, 81);
-            this.labelApellidosTutor.Name = "labelApellidosTutor";
-            this.labelApellidosTutor.Size = new System.Drawing.Size(65, 16);
-            this.labelApellidosTutor.TabIndex = 63;
-            this.labelApellidosTutor.Text = "Apellidos";
+            this.labelApellidosDocente.AutoSize = true;
+            this.labelApellidosDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelApellidosDocente.Location = new System.Drawing.Point(223, 81);
+            this.labelApellidosDocente.Name = "labelApellidosDocente";
+            this.labelApellidosDocente.Size = new System.Drawing.Size(65, 16);
+            this.labelApellidosDocente.TabIndex = 63;
+            this.labelApellidosDocente.Text = "Apellidos";
             // 
-            // labelNombresTutor
+            // labelNombresDocente
             // 
-            this.labelNombresTutor.AutoSize = true;
-            this.labelNombresTutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombresTutor.Location = new System.Drawing.Point(223, 51);
-            this.labelNombresTutor.Name = "labelNombresTutor";
-            this.labelNombresTutor.Size = new System.Drawing.Size(64, 16);
-            this.labelNombresTutor.TabIndex = 62;
-            this.labelNombresTutor.Text = "Nombres";
+            this.labelNombresDocente.AutoSize = true;
+            this.labelNombresDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombresDocente.Location = new System.Drawing.Point(223, 51);
+            this.labelNombresDocente.Name = "labelNombresDocente";
+            this.labelNombresDocente.Size = new System.Drawing.Size(64, 16);
+            this.labelNombresDocente.TabIndex = 62;
+            this.labelNombresDocente.Text = "Nombres";
             // 
-            // labelCodigoTutor
+            // labelCodigoDocente
             // 
-            this.labelCodigoTutor.AutoSize = true;
-            this.labelCodigoTutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCodigoTutor.Location = new System.Drawing.Point(223, 19);
-            this.labelCodigoTutor.Name = "labelCodigoTutor";
-            this.labelCodigoTutor.Size = new System.Drawing.Size(52, 16);
-            this.labelCodigoTutor.TabIndex = 61;
-            this.labelCodigoTutor.Text = "Codigo";
+            this.labelCodigoDocente.AutoSize = true;
+            this.labelCodigoDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCodigoDocente.Location = new System.Drawing.Point(223, 19);
+            this.labelCodigoDocente.Name = "labelCodigoDocente";
+            this.labelCodigoDocente.Size = new System.Drawing.Size(52, 16);
+            this.labelCodigoDocente.TabIndex = 61;
+            this.labelCodigoDocente.Text = "Codigo";
             // 
             // label22
             // 
@@ -350,11 +350,11 @@ namespace WinFormsFix
         private System.Windows.Forms.Label labelMensaje;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelCatRegTipo;
-        private System.Windows.Forms.Label labelTipoContrato;
-        private System.Windows.Forms.Label labelEscuelaProfesiona;
-        private System.Windows.Forms.Label labelApellidosTutor;
-        private System.Windows.Forms.Label labelNombresTutor;
-        private System.Windows.Forms.Label labelCodigoTutor;
+        private System.Windows.Forms.Label labelTipoContratoDocente;
+        private System.Windows.Forms.Label labelEPDocente;
+        private System.Windows.Forms.Label labelApellidosDocente;
+        private System.Windows.Forms.Label labelNombresDocente;
+        private System.Windows.Forms.Label labelCodigoDocente;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;

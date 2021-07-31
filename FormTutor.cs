@@ -12,13 +12,13 @@ namespace WinFormsFix
 {
     public partial class FormTutor : Form
     {
-        string CodTutor;
+        string CodDocente;
         string Semestre = "2021-II";
 
         public FormTutor(string CodDocente)
         {
             InitializeComponent();
-            CodTutor = CodDocente;
+            this.CodDocente = CodDocente;
             FillPersonalData(CodDocente);
         }
 
@@ -27,7 +27,6 @@ namespace WinFormsFix
             dsTutoriasTableAdapters.DocenteTableAdapter ta = new dsTutoriasTableAdapters.DocenteTableAdapter();
             dsTutorias.DocenteDataTable dt = ta.GetDataByCodDocente(CodDocente);
             dsTutorias.DocenteRow row = (dsTutorias.DocenteRow)dt[0];
-            labelNombresB.Text = row.Nombres;
             labelCodigoDocente.Text = row.CodDocente;
             labelNombresDocente.Text = row.Nombres;
             labelApellidosDocente.Text = row.Apellidos;
@@ -41,36 +40,36 @@ namespace WinFormsFix
             {
                 if (row.Categoria == "PR" && row.Regimen == "DE")
                 {
-                    labelCategoriaRegimenDocente.Text = "PRINCIPAL - DEDICACIÓN EXCLUSIVA";
+                    labelCatRegTipo.Text = "PRINCIPAL - DEDICACIÓN EXCLUSIVA";
                 }
                 if (row.Categoria == "PR" && row.Regimen == "TC")
                 {
-                    labelCategoriaRegimenDocente.Text = "PRINCIPAL - TIEMPO COMPLETO";
+                    labelCatRegTipo.Text = "PRINCIPAL - TIEMPO COMPLETO";
                 }
                 if (row.Categoria == "AS" && row.Regimen == "DE")
                 {
-                    labelCategoriaRegimenDocente.Text = "ASOCIADO - DEDICACIÓN EXCLUSIVA";
+                    labelCatRegTipo.Text = "ASOCIADO - DEDICACIÓN EXCLUSIVA";
                 }
                 if (row.Categoria == "AS" && row.Regimen == "TC")
                 {
-                    labelCategoriaRegimenDocente.Text = "ASOCIADO - TIEMPO COMPLETO";
+                    labelCatRegTipo.Text = "ASOCIADO - TIEMPO COMPLETO";
                 }
                 if (row.Categoria == "AS" && row.Regimen == "TP")
                 {
-                    labelCategoriaRegimenDocente.Text = "ASOCIADO - TIEMPO PARCIAL";
+                    labelCatRegTipo.Text = "ASOCIADO - TIEMPO PARCIAL";
                 }
                 if (row.Categoria == "AU" && row.Regimen == "TC")
                 {
-                    labelCategoriaRegimenDocente.Text = "AUXILIAR - TIEMPO COMPLETO";
+                    labelCatRegTipo.Text = "AUXILIAR - TIEMPO COMPLETO";
                 }
                 if (row.Categoria == "AU" && row.Regimen == "TP")
                 {
-                    labelCategoriaRegimenDocente.Text = "AUXILIAR - TIEMPO PARCIAL";
+                    labelCatRegTipo.Text = "AUXILIAR - TIEMPO PARCIAL";
                 }
             }
             if (row.TipoContrato == "CONTRATADO")
             {
-                labelCategoriaRegimenDocente.Text = row.Tipo;
+                labelCatRegTipo.Text = row.Tipo;
             }
         }
 
@@ -92,31 +91,31 @@ namespace WinFormsFix
         // Actualizar datos:
         private void buttonActualizarDatos_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormTutorActualizarDatos(CodTutor));
+            openChildForm(new FormTutorActualizarDatos(CodDocente));
         }
 
         // Ver tutorias:
         private void buttonVerTutorias_Click_1(object sender, EventArgs e)
         {
-            openChildForm(new FormTutorTutorias(CodTutor));
+            openChildForm(new FormTutorTutorias(CodDocente));
         }
 
         // Crear ficha tutoria:
         private void buttonCrearFichaTutoria_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormTutorCrearFicha(labelCodigoDocente.Text, labelNombresDocente.Text + labelApellidosDocente.Text));
+            openChildForm(new FormTutorCrearFicha(CodDocente, labelNombresDocente.Text + " " + labelApellidosDocente.Text, Semestre));
         }
 
         // Lista Estudiantes:
         private void buttonListaEstudiantes_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormTutorEstudiantes(Semestre, CodTutor));
+            openChildForm(new FormTutorEstudiantes(CodDocente, Semestre));
         }
 
         // Buscar estudiante:
         private void buttonBuscarEstudiante_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormTutorBuscarEstudiante());
+            openChildForm(new FormTutorBuscarEstudiante(CodDocente, Semestre));
         }
 
         private void label1_Click(object sender, EventArgs e)

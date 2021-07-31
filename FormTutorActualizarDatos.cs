@@ -13,6 +13,7 @@ namespace WinFormsFix
 {
     public partial class FormTutorActualizarDatos : Form
     {
+        // TableAdapter Docente:
         private DocenteTableAdapter taDocente = new DocenteTableAdapter();
         private dsTutorias.DocenteDataTable dtDocente = new dsTutorias.DocenteDataTable();
 
@@ -20,13 +21,18 @@ namespace WinFormsFix
         {
             InitializeComponent();
             labelMensaje.Text = "";
+            FillPersonalData(CodDocente);
+        }
+
+        private void FillPersonalData(string CodDocente)
+        {
             dtDocente = taDocente.GetDataByCodDocente(CodDocente);
             dsTutorias.DocenteRow row = (dsTutorias.DocenteRow)dtDocente.Rows[0];
-            labelCodigoTutor.Text = CodDocente;
-            labelNombresTutor.Text = row.Nombres;
-            labelApellidosTutor.Text = row.Apellidos;
-            labelEscuelaProfesiona.Text = "INGENIERIA INFORMÁTICA Y DE SISTEMAS";
-            labelTipoContrato.Text = row.TipoContrato;
+            labelCodigoDocente.Text = CodDocente;
+            labelNombresDocente.Text = row.Nombres;
+            labelApellidosDocente.Text = row.Apellidos;
+            labelEPDocente.Text = "INGENIERIA INFORMÁTICA Y DE SISTEMAS";
+            labelTipoContratoDocente.Text = row.TipoContrato;
             textBoxEmailDocente.Text = row.Email;
             textBoxDireccionDocente.Text = row.Dirección;
             textBoxCelularDocente.Text = row.Celular;
@@ -70,22 +76,34 @@ namespace WinFormsFix
         private void buttonActualizarTutor_Click(object sender, EventArgs e)
         {
             labelMensaje.Text = "";
-            dtDocente = taDocente.GetDataByCodDocente(labelCodigoTutor.Text);
+            dtDocente = taDocente.GetDataByCodDocente(labelCodigoDocente.Text);
             dsTutorias.DocenteRow row = (dsTutorias.DocenteRow)dtDocente.Rows[0];
-            string Tipo = null;
-            if (row.TipoContrato == "CONTRATADO") Tipo = row.Tipo;
 
-            taDocente.Modificar(labelNombresTutor.Text,
-                                labelApellidosTutor.Text,
+            string Tipo = null;
+            string Categoria = null;
+            string Regimen = null;
+
+            if (row.TipoContrato == "NOMBRADO")
+            {
+                Categoria = row.Categoria;
+                Regimen = row.Regimen;
+            }
+            if (row.TipoContrato == "CONTRATADO")
+            {
+                Tipo = row.Tipo;
+            }
+
+            taDocente.Modificar(labelNombresDocente.Text,
+                                labelApellidosDocente.Text,
                                 "IN",
-                                labelTipoContrato.Text,
-                                row.Categoria,
-                                row.Regimen,
+                                labelTipoContratoDocente.Text,
+                                Categoria,
+                                Regimen,
                                 Tipo,
                                 textBoxEmailDocente.Text,
                                 textBoxDireccionDocente.Text,
                                 textBoxCelularDocente.Text,
-                                labelCodigoTutor.Text) ;
+                                labelCodigoDocente.Text) ;
 
             labelMensaje.Text = "Se modificó el registro";
         }

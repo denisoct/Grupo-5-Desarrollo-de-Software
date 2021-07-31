@@ -20,7 +20,7 @@ namespace WinFormsFix
         private EstudianteTableAdapter taEstudiante = new EstudianteTableAdapter();
         private dsTutorias.EstudianteDataTable dtEstudiante = new dsTutorias.EstudianteDataTable();
 
-        public FormTutorEstudiantes(string Semestre, string CodigoTutor)
+        public FormTutorEstudiantes(string CodigoTutor, string Semestre)
         {
             InitializeComponent();
             dtTutor = taTutor.GetEstudiantesByCodTutor(CodigoTutor, Semestre);

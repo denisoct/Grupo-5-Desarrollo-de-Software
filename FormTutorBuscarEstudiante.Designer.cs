@@ -29,18 +29,18 @@ namespace WinFormsFix
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonBuscarEstudianteCodigo = new System.Windows.Forms.Button();
+            this.buttonBuscarCodEstudiante = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxCodEstudiante = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.labellMensaje = new System.Windows.Forms.Label();
+            this.labelMensaje = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonSolicitar = new System.Windows.Forms.Button();
+            this.buttonSolicitarDatos = new System.Windows.Forms.Button();
             this.labelInformacionPersonal = new System.Windows.Forms.Label();
-            this.labelCelular = new System.Windows.Forms.Label();
+            this.labelCelularEstudiante = new System.Windows.Forms.Label();
             this.labelDireccionEstudiante = new System.Windows.Forms.Label();
             this.labelEmailEstudiante = new System.Windows.Forms.Label();
             this.labelEPEstudiante = new System.Windows.Forms.Label();
@@ -61,15 +61,16 @@ namespace WinFormsFix
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // buttonBuscarEstudianteCodigo
+            // buttonBuscarCodEstudiante
             // 
-            this.buttonBuscarEstudianteCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscarEstudianteCodigo.Location = new System.Drawing.Point(435, 18);
-            this.buttonBuscarEstudianteCodigo.Name = "buttonBuscarEstudianteCodigo";
-            this.buttonBuscarEstudianteCodigo.Size = new System.Drawing.Size(84, 25);
-            this.buttonBuscarEstudianteCodigo.TabIndex = 32;
-            this.buttonBuscarEstudianteCodigo.Text = "Buscar";
-            this.buttonBuscarEstudianteCodigo.UseVisualStyleBackColor = true;
+            this.buttonBuscarCodEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscarCodEstudiante.Location = new System.Drawing.Point(435, 18);
+            this.buttonBuscarCodEstudiante.Name = "buttonBuscarCodEstudiante";
+            this.buttonBuscarCodEstudiante.Size = new System.Drawing.Size(84, 25);
+            this.buttonBuscarCodEstudiante.TabIndex = 32;
+            this.buttonBuscarCodEstudiante.Text = "Buscar";
+            this.buttonBuscarCodEstudiante.UseVisualStyleBackColor = true;
+            this.buttonBuscarCodEstudiante.Click += new System.EventHandler(this.buttonBuscarCodEstudiante_Click);
             // 
             // label2
             // 
@@ -90,7 +91,7 @@ namespace WinFormsFix
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.buttonBuscarEstudianteCodigo);
+            this.panel2.Controls.Add(this.buttonBuscarCodEstudiante);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.textBoxCodEstudiante);
             this.panel2.Location = new System.Drawing.Point(0, 49);
@@ -120,7 +121,7 @@ namespace WinFormsFix
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.labellMensaje);
+            this.groupBox6.Controls.Add(this.labelMensaje);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox6.Location = new System.Drawing.Point(0, 414);
             this.groupBox6.Name = "groupBox6";
@@ -129,21 +130,21 @@ namespace WinFormsFix
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Mensaje:";
             // 
-            // labellMensaje
+            // labelMensaje
             // 
-            this.labellMensaje.AutoSize = true;
-            this.labellMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labellMensaje.Location = new System.Drawing.Point(7, 20);
-            this.labellMensaje.Name = "labellMensaje";
-            this.labellMensaje.Size = new System.Drawing.Size(116, 15);
-            this.labellMensaje.TabIndex = 0;
-            this.labellMensaje.Text = "Se agrego con éxito";
+            this.labelMensaje.AutoSize = true;
+            this.labelMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMensaje.Location = new System.Drawing.Point(7, 20);
+            this.labelMensaje.Name = "labelMensaje";
+            this.labelMensaje.Size = new System.Drawing.Size(116, 15);
+            this.labelMensaje.TabIndex = 0;
+            this.labelMensaje.Text = "Se agrego con éxito";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.buttonSolicitar);
+            this.panel1.Controls.Add(this.buttonSolicitarDatos);
             this.panel1.Controls.Add(this.labelInformacionPersonal);
-            this.panel1.Controls.Add(this.labelCelular);
+            this.panel1.Controls.Add(this.labelCelularEstudiante);
             this.panel1.Controls.Add(this.labelDireccionEstudiante);
             this.panel1.Controls.Add(this.labelEmailEstudiante);
             this.panel1.Controls.Add(this.labelEPEstudiante);
@@ -163,15 +164,15 @@ namespace WinFormsFix
             this.panel1.Size = new System.Drawing.Size(585, 315);
             this.panel1.TabIndex = 91;
             // 
-            // buttonSolicitar
+            // buttonSolicitarDatos
             // 
-            this.buttonSolicitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSolicitar.Location = new System.Drawing.Point(459, 268);
-            this.buttonSolicitar.Name = "buttonSolicitar";
-            this.buttonSolicitar.Size = new System.Drawing.Size(54, 20);
-            this.buttonSolicitar.TabIndex = 59;
-            this.buttonSolicitar.Text = "Solicitar";
-            this.buttonSolicitar.UseVisualStyleBackColor = true;
+            this.buttonSolicitarDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSolicitarDatos.Location = new System.Drawing.Point(452, 268);
+            this.buttonSolicitarDatos.Name = "buttonSolicitarDatos";
+            this.buttonSolicitarDatos.Size = new System.Drawing.Size(54, 20);
+            this.buttonSolicitarDatos.TabIndex = 59;
+            this.buttonSolicitarDatos.Text = "Solicitar";
+            this.buttonSolicitarDatos.UseVisualStyleBackColor = true;
             // 
             // labelInformacionPersonal
             // 
@@ -183,15 +184,15 @@ namespace WinFormsFix
             this.labelInformacionPersonal.TabIndex = 66;
             this.labelInformacionPersonal.Text = "Información Personal";
             // 
-            // labelCelular
+            // labelCelularEstudiante
             // 
-            this.labelCelular.AutoSize = true;
-            this.labelCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCelular.Location = new System.Drawing.Point(212, 208);
-            this.labelCelular.Name = "labelCelular";
-            this.labelCelular.Size = new System.Drawing.Size(50, 16);
-            this.labelCelular.TabIndex = 65;
-            this.labelCelular.Text = "Celular";
+            this.labelCelularEstudiante.AutoSize = true;
+            this.labelCelularEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCelularEstudiante.Location = new System.Drawing.Point(212, 208);
+            this.labelCelularEstudiante.Name = "labelCelularEstudiante";
+            this.labelCelularEstudiante.Size = new System.Drawing.Size(50, 16);
+            this.labelCelularEstudiante.TabIndex = 65;
+            this.labelCelularEstudiante.Text = "Celular";
             // 
             // labelDireccionEstudiante
             // 
@@ -361,17 +362,17 @@ namespace WinFormsFix
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button buttonBuscarEstudianteCodigo;
+        private System.Windows.Forms.Button buttonBuscarCodEstudiante;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxCodEstudiante;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label labellMensaje;
+        private System.Windows.Forms.Label labelMensaje;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonSolicitar;
+        private System.Windows.Forms.Button buttonSolicitarDatos;
         private System.Windows.Forms.Label labelInformacionPersonal;
-        private System.Windows.Forms.Label labelCelular;
+        private System.Windows.Forms.Label labelCelularEstudiante;
         private System.Windows.Forms.Label labelDireccionEstudiante;
         private System.Windows.Forms.Label labelEmailEstudiante;
         private System.Windows.Forms.Label labelEPEstudiante;

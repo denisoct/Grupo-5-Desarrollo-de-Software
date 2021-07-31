@@ -7,33 +7,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsFix.dsTutoriasTableAdapters;
 
 namespace WinFormsFix
 {
     public partial class FormTutorTutorias : Form
     {
+        // TableAdapter FichaTutorias:
+        private FichaTutoriasTableAdapter taFichaTutorias = new FichaTutoriasTableAdapter();
+        private dsTutorias.FichaTutoriasDataTable dtFichaTutorias = new dsTutorias.FichaTutoriasDataTable();
+
         string CodigoTutor;
 
         public FormTutorTutorias(string CodigoTutor)
         {
-            this.CodigoTutor = CodigoTutor;
             InitializeComponent();
+            this.CodigoTutor = CodigoTutor;
             labelMensaje.Text = "";
         }
 
         private void buttonVerTutorias_Click(object sender, EventArgs e)
         {
-            dsTutoriasTableAdapters.FichaTutoriasTableAdapter ta = new dsTutoriasTableAdapters.FichaTutoriasTableAdapter();
-            dsTutorias.FichaTutoriasDataTable dt = ta.BuscarSemestre(txtSemestre.Text);
-            if (dt.Rows.Count == 0)
+            dtFichaTutorias = taFichaTutorias.BuscarSemestre(txtSemestre.Text);
+            if (dtFichaTutorias.Rows.Count == 0)
             {
                 labelMensaje.Text = "Semestre no válido";
             }
             else
             {
-                dsTutorias.FichaTutoriasDataTable dtt = ta.GetDataByCodDocente(CodigoTutor, txtSemestre.Text);
-                dataGridView1.DataSource = dtt;
-                labelMensaje.Text = "Fichas de Tutoria. Semestre: " + txtSemestre.Text + " Total registros: " + dt.Rows.Count.ToString();
+                dtFichaTutorias = taFichaTutorias.GetDataByCodDocente(CodigoTutor, txtSemestre.Text);
+                dataGridView1.DataSource = dtFichaTutorias;
+                labelMensaje.Text = "Fichas de Tutoria. Semestre: " + txtSemestre.Text + " Total registros: " + dtFichaTutorias.Rows.Count.ToString();
             }
         }
     }
