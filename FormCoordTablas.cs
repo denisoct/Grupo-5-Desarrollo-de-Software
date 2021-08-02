@@ -7,11 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsFix.dsTutoriasTableAdapters;
 
 namespace WinFormsFix
 {
     public partial class FormCoordTablas : Form
     {
+        // TableAdapter Docente:
+        private DocenteTableAdapter taDocente = new DocenteTableAdapter();
+        private dsTutorias.DocenteDataTable dtDocente = new dsTutorias.DocenteDataTable();
+        // TableAdapter Estudiante:
+        private EstudianteTableAdapter taEstudiante = new EstudianteTableAdapter();
+        private dsTutorias.EstudianteDataTable dtEstudiante = new dsTutorias.EstudianteDataTable();
+        // TableAdapter RiesgoAcadémico:
+        private RiesgoAcademicoTableAdapter taRiesgoAcademico = new RiesgoAcademicoTableAdapter();
+        private dsTutorias.RiesgoAcademicoDataTable dtRiesgoAcademico = new dsTutorias.RiesgoAcademicoDataTable();
+
         public FormCoordTablas()
         {
             InitializeComponent();
@@ -22,34 +33,30 @@ namespace WinFormsFix
             if (opt == 1)
             {
                 labelTitulo.Text = "DOCENTES";
-                dsTutoriasTableAdapters.DocenteTableAdapter ta = new dsTutoriasTableAdapters.DocenteTableAdapter();
-                dsTutorias.DocenteDataTable dt = ta.GetData();
-                dataGridView1.DataSource = dt;
-                labelMensaje.Text = "Lista de Docentes. Total registros: " + dt.Rows.Count.ToString();
+                dtDocente = taDocente.GetData();
+                dataGridView1.DataSource = dtDocente;
+                labelMensaje.Text = "Lista de Docentes. Total registros: " + dtDocente.Rows.Count.ToString();
             }
             if (opt == 2)
             {               
                 labelTitulo.Text = "TUTORES";
-                dsTutoriasTableAdapters.DocenteTableAdapter ta = new dsTutoriasTableAdapters.DocenteTableAdapter();
-                dsTutorias.DocenteDataTable dt = ta.GetTutoresByCodEP(CodEP);
-                dataGridView1.DataSource = dt;
-                labelMensaje.Text = "Lista de Tutores. Total registros: " + dt.Rows.Count.ToString();
+                dtDocente = taDocente.GetTutoresByCodEP(CodEP);
+                dataGridView1.DataSource = dtDocente;
+                labelMensaje.Text = "Lista de Tutores. Total registros: " + dtDocente.Rows.Count.ToString();
             }
             if (opt == 3)
             {
                 labelTitulo.Text = "ESTUDIANTES";
-                dsTutoriasTableAdapters.EstudianteTableAdapter ta = new dsTutoriasTableAdapters.EstudianteTableAdapter();
-                dsTutorias.EstudianteDataTable dt = ta.GetData();
-                dataGridView1.DataSource = dt;
-                labelMensaje.Text = "Lista de Estudiantes. Total registros: " + dt.Rows.Count.ToString();
+                dtEstudiante = taEstudiante.GetData();
+                dataGridView1.DataSource = dtEstudiante;
+                labelMensaje.Text = "Lista de Estudiantes. Total registros: " + dtEstudiante.Rows.Count.ToString();
             }
             if (opt == 4)
             {
                 labelTitulo.Text = "ESTUDIANTES EN RIESGO ACADÉMICO";
-                dsTutoriasTableAdapters.RiesgoAcademicoTableAdapter ta = new dsTutoriasTableAdapters.RiesgoAcademicoTableAdapter();
-                dsTutorias.RiesgoAcademicoDataTable dt = ta.GetData(CodEP);
-                dataGridView1.DataSource = dt;
-                labelMensaje.Text = "Lista de Estudiantes en riesgo académico. Total registros: " + dt.Rows.Count.ToString();
+                dtRiesgoAcademico = taRiesgoAcademico.GetData(CodEP);
+                dataGridView1.DataSource =dtRiesgoAcademico;
+                labelMensaje.Text = "Lista de Estudiantes en riesgo académico. Total registros: " + dtRiesgoAcademico.Rows.Count.ToString();
             }
         }
     }

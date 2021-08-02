@@ -7,11 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsFix.dsTutoriasTableAdapters;
 
 namespace WinFormsFix
 {
     public partial class FormCoordBuscarFichaTutoria : Form
     {
+        // TableAdapter Tutor:
+        private TutorTableAdapter taTutor = new TutorTableAdapter();
+        private dsTutorias.TutorDataTable dtTutor = new dsTutorias.TutorDataTable();
+        // TableAdapter FichaTutorias:
+        private FichaTutoriasTableAdapter taFichaTutorias = new FichaTutoriasTableAdapter();
+        private dsTutorias.FichaTutoriasDataTable dtFichaTutorias = new dsTutorias.FichaTutoriasDataTable();
+
         public FormCoordBuscarFichaTutoria()
         {
             InitializeComponent();
@@ -20,25 +28,23 @@ namespace WinFormsFix
 
         private void buttonBuscarFichaTutoria_Click(object sender, EventArgs e)
         {
-            dsTutoriasTableAdapters.TutorTableAdapter ta = new dsTutoriasTableAdapters.TutorTableAdapter();
-            dsTutorias.TutorDataTable dt = ta.BuscarTutor(txtCodigoDocente.Text);
-            if (dt.Rows.Count == 0)
+            dtTutor = taTutor.BuscarTutor(txtCodigoDocente.Text);
+            if (dtTutor.Rows.Count == 0)
             {
                 labelMensaje.Text = "El código del tutor no existe";
             }
             else
             {
-                dsTutoriasTableAdapters.FichaTutoriasTableAdapter tat = new dsTutoriasTableAdapters.FichaTutoriasTableAdapter();
-                dsTutorias.FichaTutoriasDataTable dtt = tat.BuscarSemestre(txtSemestre.Text);
-                if (dtt.Rows.Count == 0)
+                dtFichaTutorias = taFichaTutorias.BuscarSemestre(txtSemestre.Text);
+                if (dtFichaTutorias.Rows.Count == 0)
                 {
                     labelMensaje.Text = "Semestre no válido";
                 }
                 else
                 {
-                    dtt = tat.GetDataByCodDocente(txtCodigoDocente.Text, txtSemestre.Text);
-                    dataGridView1.DataSource = dtt;
-                    labelMensaje.Text = "Fichas de Tutoria. Docente: " + txtCodigoDocente.Text + " Semestre: " + txtSemestre.Text + " Total registros: " + dt.Rows.Count.ToString(); ;
+                    dtFichaTutorias = taFichaTutorias.GetDataByCodDocente(txtCodigoDocente.Text, txtSemestre.Text);
+                    dataGridView1.DataSource = dtFichaTutorias;
+                    labelMensaje.Text = "Fichas de Tutoria. Docente: " + txtCodigoDocente.Text + " Semestre: " + txtSemestre.Text + " Total registros: " + dtFichaTutorias.Rows.Count.ToString(); ;
                 }
             }
         }
